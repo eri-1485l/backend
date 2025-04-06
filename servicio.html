@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Monitoreo de Microservicios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>    
+<body>
+        <nav class="navbar navbar-expand-lg  bg-dark navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/512/11813/11813935.png" alt="Logo" style="width:40px;" class="rounded-pill">
+                </a>
+            <a class="navbar-brand" href="#">Panel de Microservicios</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Configuración
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Administrar</a></li>
+                    <li><a class="dropdown-item" href="#">Modificar</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Más...</a></li>
+                    </ul>
+                </li>
+                </ul>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+        <br><br><br>
+
+        <div class="container text-center">
+            <h3>Microservicios</h3>
+            <p>Aplicación web de streaming de vídeos</p><br>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2022/11/autentificacion-doble-factor-2871943.jpg?tf=3840x" alt="Card image">
+                        <div class="card-body  bg-success-subtle">
+                            <h4 class="card-title">Autenticación</h4>
+                            <p class="card-text">Estado: <i class="fa fa-check-square fa-solid fa-circle-check text-success"></i> Activo </p>
+                            <a href="#" class="btn btn-primary">Reiniciar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://visme.co/blog/wp-content/uploads/2021/09/120-YouTube-Video-Ideas-Thumbnail.jpg" alt="Card image">
+                        <div class="card-body bg-warning-subtle">
+                            <h4 class="card-title">Contenidos</h4>
+                            
+                            <p class="card-text">Estado: <i class="fa fa-exclamation-triangle text-warning"></i> En mantenimiento </p>
+                            
+                            <button class="btn btn-primary">
+                                <span class="spinner-border spinner-border-sm"></span>
+                                Reiniciando...
+                                </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://visme.co/blog/wp-content/uploads/2021/04/explainer-video-software-header-1200-500x280.png" alt="Card image">
+                        <div class="card-body bg-danger-subtle">
+                            <h4 class="card-title">Reproducción</h4>
+                            <p class="card-text">Estado: <i class="fa fa-times text-danger"></i> Caído </p>
+                            <a href="#" class="btn btn-primary">Reiniciar</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <br><br>
+        <div class="container text-center">
+            <h3>Tabla de logs</h3>
+            <table class="table table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#ID</th>
+                        <th scope="col">Fecha/Hora</th>
+                        <th scope="col">Microservicio</th>
+                        <th scope="col">Evento</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Mensaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-success">
+                        <th scope="row">1</th>
+                        <td>2025-03-19 10:05:23</td>
+                        <td>Autenticación</td>
+                        <td>Login </td>
+                        <td>OK</td>
+                        <td>Usuario autenticado correctamente</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <th scope="row">2</th>
+                        <td>2025-03-19 10:06:00</td>
+                        <td>Reproducción</td>
+                        <td>Guardar progreso</td>
+                        <td>ERROR</td>
+                        <td>Error al guardar el progreso: conexión perdida</td>
+                    </tr>
+                    <tr class="table-success">
+                        <th scope="row">3</th>
+                        <td>2025-03-19 10:10:23</td>
+                        <td>Contenidos</td>
+                        <td>Obtener detalles </td>
+                        <td>OK</td>
+                        <td>Detalles del contenido #124 mostrados</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <th scope="row">4</th>
+                        <td>2025-03-19 10:17:15</td>
+                        <td>Reproducción</td>
+                        <td>Cargar video</td>
+                        <td>Warning</td>
+                        <td>El buffer está bajo, posible latencia en la reproducción</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <th scope="row">5</th>
+                        <td>2025-03-19 12:07:45</td>
+                        <td>Autenticación</td>
+                        <td>Renovar token</td>
+                        <td>ERROR</td>
+                        <td>Token expirado, el usuario debe iniciar sesión de nuevo</td>
+                    </tr>
+                    <tr class="table-success">
+                        <th scope="row">6</th>
+                        <td>2025-03-19 12:20:00</td>
+                        <td>Reproducción</td>
+                        <td>Iniciar reproducción</td>
+                        <td>OK</td>
+                        <td>Reproducción de contenido #222 iniciada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container-fluid mb-4">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="Micro.html" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="Micro.html">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>   
+
+
+</body>
+</html>

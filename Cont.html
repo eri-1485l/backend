@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Contenedores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/919/919853.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="70">
+    
+    
+    <nav class="navbar navbar-expand-lg  bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/128/603/603198.png" alt="Logo" style="width:40px;" class="rounded-pill">
+            </a>
+        <a class="navbar-brand display-6" href="index.html">Programación del lado del Servidor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tecnologías de Web APIs
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="HTTP.html">HTTP</a></li>
+                    <li><a class="dropdown-item" href="SOAP.html">SOAP</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="REST.html">REST</a></li>
+                    <li><a class="dropdown-item" href="JWT.html">JWT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Micro.html">Microservicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="API.html">Desarrollo de una Web API</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Cont.html">Contenedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Nube.html">Aplicaciones para la nube</a>
+                </li>
+            </ul>
+            
+            
+        </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-5 pt-4 ">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- sidebar -->
+                <nav id="navbar-example3" class="ms-5 flex-column align-items-stretch pe-4 border-end position-sticky" style="top: 70px;">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">Manejo de Contenedores</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-1-1">¿Qué es?</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">¿Cuál es su uso?</a>
+                            
+                        </nav>
+                        <a class="nav-link" href="#item-2">Contenedores vs Máquina Virtual</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-2-1">Ventajas</a>
+                            <a class="nav-link ms-3 my-1" href="#item-2-2">¿Qué son la orquestación y la gestión de contenedores?</a>
+                            <a class="nav-link ms-3 my-1" href="#item-2-3">¿Cómo almacenar y gestionar correctamente los contenedores?</a>
+                        </nav>
+                        <a class="nav-link" href="#item-3">Kubernetes</a>
+                        <a class="nav-link" href="#item-4">Docker</a>
+                        <a class="nav-link" href="#item-5">Vídeo</a>
+                    </nav>
+                </nav>
+            </div>
+
+            <div class="col-md-9">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2 p-3" tabindex="0">
+                    <div id="item-1" class="mb-5">
+                        <!-- CARRUSEL -->
+                        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                            </div>
+                            
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://www.syncfusion.com/blogs/wp-content/uploads/2022/05/Docker-and-Docker-Containers-An-Overview.png" alt="" class="d-block" style="width:100%">
+                                <div class="carousel-caption">
+                                <h1 class="text-light encabezado">Manejo de Contenedores</h1>
+                                
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://www.educative.io/v2api/editorpage/4679616276987904/image/4833294770241536" alt="" class="d-block" style="width:100%">
+                                
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://www.bretfisher.com/content/images/2022/02/kubernetes-vs-docker-2.png" alt="" class="d-block" style="width:100%">
+                                
+                                
+                            </div>
+                            </div>
+                            
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="alert alert-primary p-4 mt-2 mb-5 rounded-3 shadow-sm">
+                            <p class="mb-0 texto">
+                                La gestión de contenedores en tecnología informática se ha convertido en un elemento clave para mejorar la eficiencia de los recursos, facilitar la implementación y el escalado de las aplicaciones y reforzar la seguridad en los entornos de desarrollo y producción. Además, la implementación y el escalado de aplicaciones se simplifican y agilizan, lo que representa una ventaja real, especialmente para las arquitecturas basadas en microservicios. 
+                            </p>
+                    
+                        </div>
+                    </div>
+
+                    <div id="item-1-1" class="my-5 py-5">
+                        <h2 class="encabezado">¿Qué son los contenedores?</h2>
+                            <br>
+                        <p>
+                            <button class="btn btn-info fw-bold text-primary-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                                Click me! 
+                            </button>
+                        </p>
+                        <div style="min-height: 20px;">
+                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                <div class="card card-body texto" style="width: 400px;">
+                                    Una unidad de software estandarizada que encapsula el código y todas sus dependencias para que la aplicación pueda ejecutarse de forma rápida, fiable y coherente en diferentes entornos informáticos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card h-100 border-primary mt-3">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 mb-0 encabezado">¿Qué es una plataforma de contenedores?</h3>
+                            </div>
+                            <div class="card-body texto">
+                                Es un sistema de software que gestionar procesos como la creación y la gestión de imágenes de contenedores, la orquestación y la automatización, la integración con infraestructuras existentes, la seguridad, la conformidad, e incluso el soporte de red y el almacenamiento. Proporciona las herramientas necesarias para automatizar, desplegar, escalar e integrar estos contenedores.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="item-1-2" class="my-5 py-5">
+                        <h2 class="encabezado">¿Para qué se usan los contenedores?</h2>
+                        <div class="container mt-4">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <!-- Fila 1 -->
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-primary-subtle text-primary-emphasis">
+                                            <h3 class="h5 mb-0 encabezado">Desarrollo ágil</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Los contenedores permiten que los desarrolladores avancen con mucha más rapidez, ya que se pueden despreocupar de las dependencias y los entornos.
+                                                </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-success-subtle text-success-emphasis">
+                                            <h3 class="h5 mb-0 encabezado">Operaciones eficientes</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Los contenedores son ligeros y te permiten utilizar los recursos de computación indispensables, ni más ni menos. Así puedes ejecutar tus aplicaciones de manera eficiente.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-warning-subtle text-warning-emphasis">
+                                            <h3 class="h5 mb-0 encabezado">Ejecución en cualquier lugar</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Los contenedores se pueden ejecutar casi en cualquier lugar. Donde quieras ejecutar el software, podrás usar contenedores.</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            
+                            </div>
+                        </div><br><br>
+                        <img src="https://www.xenonstack.com/hubfs/xenonstack-containerization.png" 
+                            class="mx-auto d-block" style="max-width: 100%;" alt="">
+                    </div>
+
+                    <div id="item-2" class="my-5 py-5">
+                        <h2 class="encabezado">Contenedores frente a máquinas virtuales</h2>
+                        <div class="container mt-4">
+                            
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead-light">
+                                    <tr>
+                                    
+                                    <th scope="col" class="text-center">Contenedores</th>
+                                    <th scope="col" class="text-center">Máquinas Virtuales (VMs)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Diferencias -->
+                                    <tr class="table-info">
+                                        <td colspan="3" class="text-center font-weight-bold">DIFERENCIAS</td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        <td>Comparten el kernel del sistema operativo anfitrión</td>
+                                        <td>Incluyen su propio sistema operativo completo</td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        <td>Megabytes (ligeros)</td>
+                                        <td>Gigabytes (pesados)</td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        <td>Segundos (rápido)</td>
+                                        <td>Minutos (lento)</td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        <td>Casi nativo</td>
+                                        <td>Overhead por virtualización</td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        <td>Aislamiento a nivel de proceso (menos aislado)</td>
+                                        <td>Aislamiento completo (más seguro)</td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        <td>Microservicios, aplicaciones cloud-nativas</td>
+                                        <td>Sistemas legacy, entornos que requieren OS completo</td>
+                                        </tr>
+                                    <!-- Similitudes -->
+                                    <tr class="table-info">
+                                    <td colspan="3" class="text-center font-weight-bold">SIMILITUDES</td>
+                                    </tr>
+                                    <tr>
+                                    
+                                    <td colspan="2" class="text-center">Permiten empaquetar las aplicaciones con bibliotecas y otras
+                                        dependencias, de modo que se proporcionan entornos aislados para
+                                        ejecutar tus servicios de software.</td>
+                                    </tr>
+                                    
+                                    
+                                    
+                            
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <br><br>
+                        <img src="https://www.simform.com/wp-content/uploads/2022/05/Vm-versus-containers.png" 
+                            class="mx-auto d-block" style="max-width: 100%;" alt="">
+
+                    </div>
+
+                    <div id="item-2-1" class="my-5 py-5">
+                        <h2 class="encabezado">Ventajas</h2><br>
+                        <div class="accordion" id="Beneficios">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben1">
+                                        Separación de responsabilidades
+                                    </button>
+                                </h3>
+                                <div id="ben1" class="accordion-collapse collapse show" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        La creación en contenedores permite separar de forma clara las responsabilidades, ya que los desarrolladores se centran en la lógica y las dependencias de las aplicaciones, mientras que los equipos de operaciones de TI se dedican a desplegarlas y gestionarlas sin preocuparse por detalles concretos, como versiones de software o configuraciones específicas.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben2">
+                                        Portabilidad de las cargas de trabajo
+
+                                    </button>
+                                </h3>
+                                <div id="ben2" class="accordion-collapse collapse" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        Como los contenedores se pueden ejecutar casi en cualquier lugar, resulta facilísimo desarrollarlos y desplegarlos en sistemas operativos Linux, Windows y Mac; en máquinas virtuales o servidores físicos; en equipos de desarrolladores o centros de datos on‑premise; y, por supuesto, en la nube pública.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben3">
+                                        Aislamiento de aplicaciones
+                                    </button>
+                                </h3>
+                                <div id="ben3" class="accordion-collapse collapse" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        Los contenedores virtualizan los recursos de CPU, memoria, almacenamiento y red a nivel de sistema operativo, lo que proporciona a los desarrolladores una vista del sistema operativo aislado lógicamente de las demás aplicaciones.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben4">
+                                        Integración continua y la entrega continua (CI/CD)
+                                    </button>
+                                </h3>
+                                <div id="ben4" class="accordion-collapse collapse" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        Facilitan la integración continua y la entrega continua para actualizaciones fiables y frecuentes. De este modo, podrá simplificar sus procesos de mantenimiento y, al mismo tiempo, beneficiarse de un entorno de desarrollo estandarizado con menos dependencias, lo que permite mejorar la productividad de sus desarrolladores.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>  
+                    </div>
+
+                    <div id="item-2-2" class="my-5 py-5">
+                        <h2 class="encabezado">¿Qué son la orquestación y la gestión de contenedores?</h2>
+                        <div class="container p-5 my-5 text-primary-emphasis bg-light">
+                            <h2 class="text-center encabezado">Gestión de contenedores</h2>
+                            <p class="texto">La gestión de contenedores son los procesos, el software y las herramientas que se utilizan para crear, desplegar, supervisar y gestionar los contenedores a lo largo de su ciclo de vida —muchos de los cuales se extraen y manejan mediante plataformas de orquestación de contenedores como Kubernetes . Dentro de la gestión de contenedores está la orquestación de contenedores, que incluye el proceso y las herramientas que se utilizan para gestionar una flota de contenedores, lo que incluye cómo interoperan y se comunican entre sí a una escala más amplia.</P>
+                        </div>
+                        <div class="container p-5 my-5 text-danger-emphasis bg-light">
+                            <h2 class="text-center encabezado">Orquestación</h2>
+                            <p class="texto">La orquestación de contenedores se ha automatizado en gran medida para optimizar el trabajo necesario para hacerlas avanzar y retroceder, lo que puede ser considerable cuando empiezan a multiplicarse en una organización. La orquestación de contenedores también puede proporcionar cierta estandarización, seguridad y gobernanza que benefician a las grandes organizaciones empresariales que implementan estrategias de contenedores.</P>
+                        </div>
+
+                    </div>
+
+                    <div id="item-2-3" class="my-5 py-5">
+                        <h2 class="encabezado">¿Cómo almacenar y gestionar correctamente los contenedores?</h2>
+                        <section class="mb-5 p-4 rounded-3 shadow-sm">
+                            
+                            <ul class="list-group texto">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Registros de contenedores seguros</div>
+                                        <ul>
+                                            <li>Si necesita un mayor control y una mayor seguridad, también puede utilizar registros privados.</li>
+                                            <li>Aplicar etiquetas para gestionar mejor las distintas versiones de las imágenes de los contenedores.</li>
+                                            <li>Adoptar una política de control de versiones coherente para el seguimiento y el despliegue de las aplicaciones.</li>
+                                            <li>Realizar de forma regular escaneos de seguridad de sus imágenes para detectar posibles vulnerabilidades y comprobar que disponen del último parche de seguridad. </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Herramientas</div>
+                                        <ul>
+                                            <li>Gracias a herramientas de orquestación como Kubernetes, podrá automatizar el despliegue, el escalado y la gestión de los contenedores. </li>
+                                            <li>Herramientas como Prometheus o Grafana están a su disposición para la monitorización, vigilar la salud y el rendimiento de sus contenedores.</li>
+                                            <li>Para gestionar correctamente sus contenedores, también puede utilizar volúmenes persistentes que permitan garantizar la seguridad y la copia de seguridad de sus datos sensibles. </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Importante</div>
+                                        Es importante documentar y estandarizar sus procedimientos para una gestión coherente y eficaz de los contenedores de su infraestructura. Así usted garantiza la seguridad y la copia de seguridad de sus datos sensibles.
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </section>
+                        <img src="https://www.simform.com/wp-content/uploads/2022/05/container-orchestration-tools.png" 
+                        class="mx-auto d-block rounded-4" style="max-width: 100%;" alt="">
+                    </div>
+
+                    <div id="item-3" class="my-5 py-5">
+                        <h2 class="encabezado">Kubernetes</h2>
+                        
+                        <div class="row">
+                            <div class="col p-3 d-flex justify-content-center"> 
+                                <div class="card" style="width:400px">
+                                    <img class="card-img-top" src="https://www.accuknox.com/wp-content/uploads/kubernetes-hero-animation.gif" alt="Card image" style="width:100%">
+                                    <div class="card-body">
+                                        <h4 class="card-title encabezado">¿Qué es?</h4>
+                                        <p class="card-text texto">Kubernetes o K8s, uno de los orquestadores más populares del mercado, permite gestionar contenedores de aplicaciones en código abierto. Este tipo de arquitectura ofrece una gran estabilidad a sus aplicaciones y programas informáticos, favoreciendo así una mayor resiliencia y escalabilidad. Asimismo, el despliegue, la actualización y la explotación de estos servicios también se simplifican y automatizan.</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a href="https://kubernetes.io/es/" class="btn btn-primary">Probar</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container p-5 my-5 text-danger-emphasis texto ">
+                            
+                            <P>Kubernetes simplifica y automatiza aspectos de la orquestación de los contenedores, lo que permite que los equipos de DevOps puedan orquestar sin problemas complejas arquitecturas basadas en los contenedores. Incluso puede decidir por usted dónde ejecutar las cargas de trabajo y moverlas en caso de que sea mejor ejecutarlas en otra parte.</P>
+                    
+                        </div>
+                        <div class="container p-5 my-5 text-success-emphasis bg-success-subtle rounded-5">
+                            <h2 class="text-center encabezado">Ventajas: </h2><br>
+                            <ul class="texto">
+                                <li>Valores predefinidos que mantienen los contenedores en funcionamiento en relación con la «gestión de estado deseada» y otros criterios. Las desviaciones de los criterios definidos se corrigen automáticamente.</li>
+                                <li>Escalamiento en piloto automático</li>
+                                <li>Supervisión, comprobaciones de estado y otras operaciones de mantenimiento automatizado que garantizan una mejor disponibilidad.</li>
+                                <li>La recuperación automática y los reinicios continuos. Esto significa que se dedica menos tiempo a solucionar problemas como cuellos de botella, fallos e interrupciones.</li>
+                                <li>Automatización de tareas como el equilibrio de carga, los reinicios, la programación y el escalamiento.</li>
+                            </ul>
+                        </div>
+                        <img src="https://www.ionos.com/es-us/digitalguide/fileadmin/_processed_/9/2/csm_kubernetes-node-en-cluster_ae8d616cb0.webp" 
+                        class="mx-auto d-block" style="max-width: 100%;" alt="">
+                    </div>
+
+                    <div id="item-4" class="my-5 py-5">
+                        <h2 class="encabezado">Docker</h2>
+                        <div class="row">
+                            <div class="col p-3 d-flex justify-content-center"> 
+                                <div class="card" style="width:400px">
+                                    <img class="card-img-top" src="https://i.pinimg.com/originals/f5/5e/80/f55e8059ea945abfd6804b887dd4a0af.gif" alt="Card image" style="width:100%">
+                                    <div class="card-body">
+                                        <h4 class="card-title encabezado">¿Qué es?</h4>
+                                        <p class="card-text texto">Plataforma popular para desarrollar, enviar y ejecutar aplicaciones mediante la tecnología de contenedores.</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a href="https://www.docker.com/" class="btn btn-primary">Probar</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container p-5 my-5 text-primary-emphasis texto ">
+                            
+                            <p>
+                                Docker es un entorno de tiempo de ejecución que se utiliza para crear y crear software dentro de contenedores. La clave de la simplicidad de Docker —y de lo que la hace tan popular— es cómo permite la programación declarativa. Esto significa que, siempre que sepa cuál debería ser el resultado de su contenedor, Docker puede ayudarle a lograr y optimizar ese resultado.
+                            </p>
+                            <p>Docker también ofrece servicios de seguridad y medidas de cifrado integrados, que pueden ayudar a abordar algunas de las principales preocupaciones con la seguridad de los contenedores.</p>
+                    
+                        </div>
+                        <div class="container p-5 mb-5 text-warning-emphasis bg-light">
+                            <h2 class="text-center encabezado">¿Por qué usar Docker? </h2>
+                            <p>
+                                Docker le permite entregar código con mayor rapidez, estandarizar las operaciones de las aplicaciones, transferir el código con facilidad y ahorrar dinero al mejorar el uso de recursos. Con Docker, obtiene un solo objeto que se puede ejecutar de manera fiable en cualquier lugar. La sintaxis sencilla y simple de Docker le aporta un control absoluto. La amplia adopción significa que existe un gran ecosistema de herramientas y aplicaciones listas para su uso que puede utilizar con Docker.
+                            </p>
+                            
+                        </div>
+                        <img src="https://devopedia.org/images/article/101/8323.1565281088.png" alt="" class="d-block" style="width:100%">
+
+                        <br><br><br>
+                        <hr class="border border-primary border-2 opacity-50 my-5"><br><br><br>
+
+                        <div class="container mt-4">
+                            <h3 class="encabezado">Kubernetes VS Docker</h3><br>
+
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col" class="text-center">Kubernetes</th>
+                                        <th scope="col" class="text-center">Docker</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr class="table-info">
+                                        <td colspan="3" class="text-center font-weight-bold">¿Qué es?</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="texto p-3">Herramienta de orquestación de
+                                                contenedores.</td>
+                                            <td class="texto p-3">Pila de tecnologías de
+                                                contenedores para crear y ejecutar
+                                                contenedores.
+                                                </td>
+                                        </tr>
+                                    
+                                    <tr class="table-info">
+                                        <td colspan="3" class="text-center font-weight-bold">DIFERENCIAS</td>
+                                        </tr>
+                                        <tr >
+                                        
+                                        <td class="texto p-3">Utilizan Kubernetes para administrar
+                                            múltiples microservicios a gran
+                                            escala. Los microservicios están
+                                            formados por varios contenedores
+                                            en sí mismos.</td>
+                                        <td class="texto p-3">Los desarrolladores utilizan Docker
+                                            para crear y administrar imágenes
+                                            de contenedores.</td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        <td class="texto p-3">Funciona administrando un clúster
+                                            de instancias de computación.
+                                            Programa los contenedores que se
+                                            ejecutarán en el clúster en función
+                                            de los recursos de computación
+                                            disponibles y de las necesidades de
+                                            recursos de cada contenedor</td>
+                                        <td class="texto p-3">Conjunto de herramientas que los
+                                            desarrolladores utilizan para crear,
+                                            compartir y ejecutar aplicaciones en
+                                            contenedores.</td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        <td class="texto p-3">El software del plano de control de
+                                            Kubernetes decide cuándo y dónde
+                                            ejecutar los pods de contenedores,
+                                            administra el enrutamiento del
+                                            tráfico y escala los pods en función
+                                            de la utilización u otras métricas que
+                                            usted defina.</td>
+                                        <td class="texto p-3">Docker Engine es el componente
+                                            que utilizan los desarrolladores para
+                                            construir y crear contenedores para
+                                            sus aplicaciones. Ofrece unas API
+                                            que especifican las interfaces que
+                                            los programas pueden utilizar para
+                                            comunicarse con este y darle
+                                            instrucciones.</td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        <td class="texto p-3">Kubernetes le permite definir
+                                            aplicaciones complejas en
+                                            contenedores y ejecutarlas a gran
+                                            escala en un clúster de servidores.</td>
+                                        <td class="texto p-3">Docker agiliza el ciclo de vida del
+                                            desarrollo al permitir a los
+                                            desarrolladores trabajar en
+                                            entornos estandarizados utilizando
+                                            contenedores locales que
+                                            proporcionan sus aplicaciones y
+                                            servicios.</td>
+                                        </tr>
+                                        
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div id="item-5" class="my-5 py-5">
+                        <section class="video-section py-5 bg-light">
+                            <div class="container-lg">
+                                <h2 class="text-center mb-4">Mira este Video</h2>
+                                <div class="row">
+                                    <div class="col-lg-10 mx-auto">
+                                        <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gjRoNFopFig?si=m7bh6ZOJ0tyg8pAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="border-0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="text-center bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-col mt-4  border-end border-secondary">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="https://cdn-icons-png.flaticon.com/128/603/603198.png" alt="Logo" style="width:40px;" class="rounded-pill">
+                    </a>
+                    <p class="lead">Programación del lado del servidor</p>
+                </div>
+                
+                <div class="col-md-4 footer-col mt-3 border-end border-secondary">
+                    <h4>Referencias:</h4>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://cloud.google.com/learn/what-are-containers?hl=es#related-products-and-services" >Google Cloud</a>
+                            
+                        </li>
+                        <li>
+                            <a href="https://aws.amazon.com/es/compare/the-difference-between-kubernetes-and-docker/" >AWS</a>
+                        </li>
+                        <li>
+                            
+                            <a href="https://www.ovhcloud.com/es/learn/what-is-container-management/" >OVHcloud</a>
+                        </li>
+                        <li>
+                            
+                            <a href="https://www.purestorage.com/es/knowledge/definitive-guide-to-containers.html" >Purestorage</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-col mt-4">
+                    <h4>Sitio realizado por: </h4>
+                    <p>Erika Reyes González</p>
+                </div>
+            </div>
+        </div>
+    </footer>  
+</body>
+</html>

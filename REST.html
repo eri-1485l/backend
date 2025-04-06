@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/603/603197.png">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>    
+<body>
+    
+    <nav class="navbar navbar-expand-lg  bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/128/603/603198.png" alt="Logo" style="width:40px;" class="rounded-pill">
+            </a>
+        <a class="navbar-brand display-6" href="index.html">Programación del lado del Servidor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tecnologías de Web APIs
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="HTTP.html">HTTP</a></li>
+                    <li><a class="dropdown-item" href="SOAP.html">SOAP</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="REST.html">REST</a></li>
+                    <li><a class="dropdown-item" href="JWT.html">JWT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Micro.html">Microservicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="API.html">Desarrollo de una Web API</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Cont.html">Contenedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Nube.html">Aplicaciones para la nube</a>
+                </li>
+            </ul>
+            
+            
+        </div>
+        </div>
+    </nav>
+
+    <header class="py-3 bg-light mt-5 pt-5"> <!-- -->
+        <div class="container-lg">
+            <h1 class="display-4 text-center text-info-emphasis mb-4 encabezado">API REST</h1>
+            <p class="lead  text-center mx-auto" style="max-width: 800px;">Las API REST proporcionan una forma flexible y ligera de integrar aplicaciones
+                y se han convertido en el método más común para conectar componentes en
+                arquitecturas de microservicios.</p>
+            <div class="text-center mt-4">
+                <img src="https://blog.postman.com/wp-content/uploads/2020/07/API-101-What-Is-a-REST-API-scaled.jpg"
+                class="img-fluid rounded shadow" style="max-width: 60%;" alt="Protocolo SOAP"> 
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container-lg my-5">
+        
+        <div class="alert alert-warning p-4 mb-5 rounded-3 shadow-sm">
+            <p class="mb-0 texto">Una API, o interfaz de programación de aplicaciones es un conjunto de reglas que definen
+                la forma en que aplicaciones o dispositivos pueden conectarse y comunicarse entre sí.
+                Una API REST es una API que se ajusta a los principios de diseño de REST, o el estilo de
+                arquitectura de transferencia de estado representacional. Por esta razón, las API REST a
+                veces se denominan API RESTful.
+            </p>
+        </div>
+        
+        <section class="mb-5 p-4 rounded-3 shadow-sm">
+            <h2 class="text-center mb-4 pb-2 border-bottom encabezado">Principios</h2>
+            <ol class="list-group list-group-numbered texto">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Interfaz uniforme</div>La API REST debe
+                        garantizar que el mismo dato, como el nombre o la dirección de correo electrónico de
+                        un usuario, pertenezca a un solo identificador uniforme de recursos (URI). Los recursos no deben ser demasiado grandes, pero deben contener toda la información
+                        que el cliente necesite.
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Desacoplamiento cliente-servidor</div>
+                        La única información que debe conocer la aplicación del cliente es el URI del recurso
+                        solicitado; no puede interactuar con la aplicación del servidor de ninguna otra
+                        manera. De manera similar, una aplicación de servidor no debería modificar la
+                        aplicación del cliente además de pasarla a los datos solicitados a través de HTTP.
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Sin estado</div>
+                        Las API REST no tienen estado, lo que significa que cada solicitud debe
+                        incluir toda la información necesaria para procesarla. En otras palabras, las API REST
+                        no requieren ninguna sesión del lado del servidor. Las aplicaciones de servidor no
+                        pueden almacenar ningún dato relacionado con la solicitud de un cliente.
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Capacidad de caché</div>
+                        Cuando sea posible, los recursos deben almacenarse en la
+                        memoria caché en el lado del cliente o del servidor. Las respuestas del servidor
+                        también deben contener información sobre si se permite el almacenamiento en caché
+                        para el recurso entregado
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Arquitectura del sistema en capas</div>
+                        En las API REST, las llamadas y respuestas pasan
+                        por diferentes capas. Como regla general, no asuma que las aplicaciones cliente y
+                        servidor se conectan directamente entre sí. Puede haber varios intermediarios
+                        diferentes en el bucle de comunicación
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Código bajo demanda (opcional)</div>
+                        Las API REST generalmente envían recursos
+                        estáticos, pero en ciertos casos, las respuestas también pueden contener código
+                        ejecutable (como los subprogramas de Java). En estos casos, el código solo debe
+                        ejecutarse bajo demanda.
+
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+
+        <div class="container p-5 my-5 bg-success p-2 text-dark bg-opacity-25 text-info-emphasis rounded">
+            <h2 class="text-center encabezado">Usabilidad</h2>
+            
+            <dl class="texto">
+                <dt>Aplicaciones en la nube</dt>
+                <dd>Si algo falla, los componentes sin estado pueden redistribuirse y escalarse sin problemas para acomodar los cambios de carga. El intercambio de documentos, el almacenamiento, las finanzas y la contabilidad, la gestión de relaciones con los clientes (CRM), el control de inventario y la recopilación de información son algunos de los trabajos realizados con aplicaciones basadas en la nube.</dd>
+                <dt>Servicios en la nube</dt>
+                <dd>REST también es útil en los servicios en la nube porque usted necesita controlar cómo se decodifica la URL para vincularse a un servicio a través de una API. Dicho esto, la computación en la nube y los microservicios, sin duda, harán del diseño RESTful API la regla del futuro.
+                </dd>
+                <dt>Uso web </dt>
+                <dd>Dado que REST no está vinculado a la tecnología del lado del cliente, se puede acceder a estas API desde un proyecto web del lado del cliente, una aplicación iOS, un dispositivo IoT o un Windows Phone. Puede construir la infraestructura para su organización sin preocuparse de estar pegado a una pila particular del lado del cliente.                  
+                </dd>
+            </dl>  
+            
+        </div>
+
+        <section class="mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*WFBeioYOuRPdG84-PhNjtw.png" 
+                    class="img-fluid rounded" alt="restfuncion">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h2 class="mb-3 encabezado">Funcionamiento</h2>
+                    <div class="texto">
+                        <p>Las API REST se comunican mediante solicitudes HTTP para realizar funciones de bases
+                        de datos estándar como crear, leer, actualizar y eliminar registros (también conocidas
+                        como CRUD) dentro de un recurso.
+                        </p>
+                        <p>El estado de un recurso en un instante particular, o la indicación de fecha y hora, se
+                            conoce como representación del recurso. Esta información se puede entregar a un
+                            cliente en prácticamente cualquier formato, incluido JavaScript Object Notation (JSON),HTML, XLT, Python, PHP o texto sin formato. JSON es popular porque es legible tanto por
+                            humanos como por máquinas, y es independiente del lenguaje de programación.
+                            
+                        </p>
+                        <p>Los encabezados y parámetros de las solicitudes también son importantes en las
+                            llamadas a la API REST porque incluyen información de identificación importante, como
+                            metadatos, autorizaciones, identificadores uniformes de recursos (URI), almacenamiento
+                            en caché, cookies y más. Los encabezados de solicitud y de respuesta, junto con los
+                            códigos de estado HTTP convencionales, se utilizan dentro de API REST bien diseñadas
+
+                        </p>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="mb-5">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-1">
+                    <img src="https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenario-tutorials/scenario1.png" 
+                    class="img-fluid" style="max-width: 70%;" alt="OpenApi">
+                    <img src="https://cdn-ajfbi.nitrocdn.com/GuYcnotRkcKfJXshTEEKnCZTOtUwxDnm/assets/images/optimized/rev-b67698c/www.astera.com/wp-content/uploads/2024/06/7-API-Secuity-best-practices.jpg" 
+                    class="img-fluid" style="max-width: 100%;" alt="buenasPracticas">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="text-center mb-4 encabezado">Mejores prácticas</h2>
+                    <div class="accordion" id="practicas">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button fw-bold text-info-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#ben1">
+                                    Especificación OpenAPI (OAS)
+                                </button>
+                            </h3>
+                            <div id="ben1" class="accordion-collapse collapse show" data-bs-parent="#practicas">
+                                <div class="accordion-body texto">
+                                    <p>La Especificación OpenAPI (OAS) establece una interfaz para describir una API de una forma que permite que cualquier desarrollador o aplicación pueda descubrir y comprender completamente sus parámetros y funcionalidades:</p>
+                                    <ul class="list-group list-group-flush ">
+                                        <li class="list-group-item bg-info-subtle">Puntos finales disponibles</li>
+                                        <li class="list-group-item bg-info-subtle">Operaciones permitidas en cada punto final</li>
+                                        <li class="list-group-item bg-info-subtle">Parámetros de operación</li>
+                                        <li class="list-group-item bg-info-subtle">Métodos de autenticación</li>
+                                    </ul>
+                                    <p class="mt-3">La última versión, OAS3, incluye herramientas prácticas como OpenAPI Generator para generar apéndices de clientes y servidor de API en distintos lenguajes de programación.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-info-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#ben2">
+                                    Prácticas de Seguridad
+                                </button>
+                            </h3>
+                            <div id="ben2" class="accordion-collapse collapse" data-bs-parent="#practicas">
+                                <div class="accordion-body texto">
+                                    <div class="card">
+                                        <div class="card-header bg-success text-white">
+                                            Protección de API REST
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Mejores Prácticas de Seguridad</h5>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <ul class="list-unstyled">
+                                                        <li class="mb-2"><i class="fa fa-check-circle" style="font-size:24px;color:greenyellow"></i> Uso de algoritmos hash para seguridad de contraseñas</li>
+                                                        <li class="mb-2"><i class="fa fa-check-circle" style="font-size:24px;color:greenyellow"></i> HTTPS para transmisión segura de datos</li>
+                                                        <li class="mb-2"><i class="fa fa-check-circle" style="font-size:24px;color:greenyellow"></i> Marco de autorización OAuth 2.0</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <ul class="list-unstyled">
+                                                        <li class="mb-2"><i class="fa fa-check-circle" style="font-size:24px;color:greenyellow"></i> Indicación de fecha y hora en encabezado HTTP</li>
+                                                        <li class="mb-2"><i class="fa fa-check-circle" style="font-size:24px;color:greenyellow"></i> Validación de parámetros</li>
+                                                        <li class="mb-2"><i class="fa fa-check-circle" style="font-size:24px;color:greenyellow"></i> Uso de JSON Web Token</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer text-muted">
+                                            Objetivo: Limitar privilegios de aplicaciones de terceros
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-5 py-5">
+            <h2 class="text-center mb-4 encabezado">Ventajas y Desventajas</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-success">
+                        <div class="card-header bg-success text-white">
+                            <h3 class="h5 mb-0 encabezado">Ventajas</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <strong>Separación entre el cliente y el servidor:</strong> Mejora la portabilidad de la interfaz a otro tipo de plataformas, aumenta la escalabilidad de los proyectos y permite que los distintos componentes de los desarrollos se puedan evolucionar de forma independiente. 
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Visibilidad, fiabilidad y escalabilidad:</strong> Se puede migrar a otros servidores o realizar todo tipo de cambios en la base de datos, siempre y cuando los datos de cada una de las peticiones se envíen de forma correcta. Facilita tener en servidores distintos el front y el back y eso convierte a las aplicaciones en productos más flexibles.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Independiente del tipo de plataformas o lenguajes:</strong> Con una API REST se pueden tener servidores PHP, Java, Python o Node.js. Lo único que es indispensable es que las respuestas a las peticiones se hagan siempre en el lenguaje de intercambio de información usado, normalmente XML o JSON.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-danger">
+                        <div class="card-header bg-danger text-white">
+                            <h3 class="h5 mb-0 encabezado">Desventajas</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <strong>Sobre-solicitud de datos:</strong> En algunos casos, las APIs REST pueden devolver más datos de los necesarios, lo que puede afectar negativamente el rendimiento de la aplicación. 
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Versionamiento:</strong> La evolución de una API REST puede resultar complicada, ya que los cambios pueden afectar a los clientes existentes.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Exceso de peticiones:</strong> Para obtener información completa, a veces se requieren múltiples solicitudes a diferentes endpoints, lo que puede ralentizar la aplicación.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Rigidez en la estructura:</strong> La estructura rígida de los endpoints puede llevar a la necesidad de crear múltiples endpoints para casos específicos.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-5 p-4 rounded-3">
+            <h2 class="text-center mb-4 encabezado">REST vs SOAP</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="card h-100">
+                        <div class="card-header bg-danger bg-gradient text-white">
+                            <h3 class="h5 mb-0 encabezado">REST</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <p>
+                                Significa Transferencia de estado representacional. REST es un estilo de arquitectura para diseñar interfaces de comunicación. La API de REST expone los datos.
+                            </p>
+                            <p>
+                                REST solo funciona con HTTPS. REST admite XML, JSON, texto plano y HTML. REST tiene un rendimiento más rápido debido a los mensajes más pequeños y al soporte de almacenamiento en caché.
+                            </p>
+                            <p>
+                                REST es fácil de escalar. No tiene estado, por lo que cada mensaje se procesa de manera independiente de los mensajes anteriores.
+                            </p>
+                            <p>
+                                REST admite cifrado sin afectar al rendimiento. REST es útil en aplicaciones modernas y API públicas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-warning bg-gradient text-white">
+                            <h3 class="h5 mb-0 encabezado">SOAP</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <p>
+                                Significa Protocolo simple de acceso a objetos. SOAP es un protocolo para la comunicación entre aplicaciones. La API de SOAP expone la operación.
+                            </p>
+                            <p>
+                                SOAP es independiente y puede funcionar con cualquier protocolo de transporte. SOAP solo admite el intercambio de datos XML. Los mensajes SOAP son más grandes, lo que hace que la comunicación sea más lenta.
+                            </p>
+                            <p>
+                                SOAP es difícil de escalar. El servidor mantiene el estado al almacenar todos los mensajes anteriores intercambiados con un cliente.
+                            </p>
+                            <p>
+                                SOAP admite el cifrado con sobrecargas adicionales. SOAP es útil en aplicaciones antiguas y API privadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <p class="text-center mb-0">SOAP es un protocolo, mientras que REST es un estilo de arquitectura. Esto crea diferencias significativas en el comportamiento de las API de SOAP y las API de REST.</p>
+            </div>
+        </section>
+
+        <div class="container p-5 my-5 bg-warning bg-gradient bg-opacity-25 text-info-emphasis">
+            <h2 class="text-center encabezado">Ejemplos de API REST</h2>
+            <dl class="texto">
+                <dt>Google Translate y DeepL</dt>
+                <dd>Google Translate es una de las aplicaciones de traducción más usadas del mundo. DeepL, aunque menos conocida, tiene una mayor calidad. La buena noticia es que ambas disponen de API REST para poder embeberlas dentro de una web, una app o un servicio. Esto es clave en empresas con clientes en países con otro idioma.
+                </dd>
+                <dt>Wikipedia</dt>
+                <dd>La API REST de Wikipedia es una herramienta con mucho valor para empresas de cierto tamaño, ya que permite automatizar envíos de actualizaciones de las páginas, entre otros usos. Esto resulta útil para conocer el impacto de una marca y corregir errores de manera proactiva. Es por ello que es uno de los ejemplos de API REST más destacados.
+                </dd>
+                
+            </dl>  
+        </div>
+
+    </main>
+
+    <section class="video-section py-5 bg-light">
+        <div class="container-lg">
+            <h2 class="text-center mb-4">Mira este Video</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JD6VNRdGl98?si=fsEpHUYoiI1SpS3p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="border-0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="text-center bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-col mt-4  border-end border-secondary">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="https://cdn-icons-png.flaticon.com/128/603/603198.png" alt="Logo" style="width:40px;" class="rounded-pill">
+                    </a>
+                    <p class="lead">Programación del lado del servidor</p>
+                </div>
+                
+                <div class="col-md-4 footer-col mt-3 border-end border-secondary">
+                    <h4>Referencias:</h4>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://aws.amazon.com/es/compare/the-difference-between-soap-rest/" >AWS</a>
+                        </li>
+                        <li>
+                            <a href="https://www.ibm.com/mx-es/topics/rest-apis" >IBM</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-col mt-4">
+                    <h4>Sitio realizado por: </h4>
+                    <p>Erika Reyes González</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

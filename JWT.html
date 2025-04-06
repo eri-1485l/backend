@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/17840/17840057.png">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg  bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/128/603/603198.png" alt="Logo" style="width:40px;" class="rounded-pill">
+            </a>
+        <a class="navbar-brand display-6" href="index.html">Programación del lado del Servidor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tecnologías de Web APIs
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="HTTP.html">HTTP</a></li>
+                    <li><a class="dropdown-item" href="SOAP.html">SOAP</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="REST.html">REST</a></li>
+                    <li><a class="dropdown-item" href="JWT.html">JWT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Micro.html">Microservicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="API.html">Desarrollo de una Web API</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Cont.html">Contenedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Nube.html">Aplicaciones para la nube</a>
+                </li>
+            </ul>
+            
+            
+        </div>
+        </div>
+    </nav>
+
+    <header class="py-3 bg-light mt-5 pt-5"> <!-- -->
+        <div class="container-lg">
+            <h1 class="display-4 text-center text-info-emphasis mb-4 encabezado">JSON Web Token</h1>
+            <p class="lead  text-center mx-auto" style="max-width: 800px;">
+                El acto de solicitar un documento de
+                identificación es una forma de autenticación para que usted reciba la autorización para ingresar. En la web,
+                este proceso funciona de manera similar. Para realizar solicitudes de algunos servicios o acceder a
+                determinadas páginas, deberá identificarse de alguna forma y esta identificación deberá ser segura y única.
+            </p>
+            <div class="text-center mt-4">
+                <img src="https://byte-mind.net/wp-content/uploads/2022/02/JWT.jpg"
+                class="img-fluid rounded shadow" style="max-width: 60%;" alt="Protocolo SOAP"> 
+            </div>
+        </div>
+    </header>
+
+    <main class="container-lg my-5">
+        
+        <div class="alert alert-warning p-4 mb-5 rounded-3 shadow-sm texto">
+            <p class="mb-0">Un token es una firma digital, una clave. Un JWT es un estándar para la autenticación y el intercambio de información definido por RFC7519. Es
+                posible almacenar objetos JSON de forma segura y compacta. Este token es un código Base64 y se puede
+                firmar con un par de claves secretas o privadas/públicas.                
+            </p>
+            <p>Los tokens firmados pueden verificar la integridad de la información que contienen, a diferencia de los
+                tokens cifrados que ocultan esta información. Si un JWT está firmado por un par de claves pública/privada,
+                la empresa certifica que la parte que tiene la clave privada está realmente firmada</p>
+        </div>
+
+        <section class="mb-5 p-4 rounded-3 shadow-sm">
+            <h2 class="text-center mb-4 pb-2 border-bottom encabezado">¿Cómo surgió?</h2>
+            <ul class="list-group list-group texto">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Familia JOSE</div>
+                        JOSE significa JSON Object Signing and Encryption, en inglés JSON Object Signing and Encryption. JWT
+                        es parte de esta familia de especificaciones y representa el token.
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">JWT (JSON Web Tokens):</div>
+                        Representa el propio token
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">JWS (JSON Web Signature):</div>
+                        Representa la firma del token
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">JWE (JSON Web Encryption):</div>
+                        Representa la firma para el cifrado de tokens
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">JWK (JSON Web Keys):</div>
+                        Representa las claves para la firma
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">JWA (JSON Web Algorithms):</div>
+                        Representa los algoritmos para firmar el token
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <div class="container p-5 my-5 bg-primary bg-gradient text-white rounded">
+            <h2 class="text-center encabezado">Usos</h2>
+            
+            <dl class="texto">
+                <dt>Autorización</dt>
+                <dd>
+                    Una vez que el usuario haya iniciado sesión,
+                    puede ver cada solicitud y verificar que incluye el JWT, lo que le permite acceder a rutas, servicios y otros
+                    recursos.
+                </dd>
+                <dt>Intercambio de información</dt>
+                <dd>Una vez firmado, es posible
+                    estar seguro de que los remitentes son quienes dicen ser. Además, podemos identificar si el contenido de la
+                    empresa ha cambiado o no debido a la composición de un JWT.
+                    
+                </dd>
+                
+            </dl>  
+            
+        </div>
+
+        <section class="mb-5 py-5">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-1 mt-5">
+                    <img src="https://s3.amazonaws.com/cdn2.hayageek.com/wp-content/uploads/2024/07/30110720/jwt.png" 
+                    class="img-fluid" style="max-width: 100%;" alt="SOAP API">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="text-center mb-4 encabezado">Componentes Básicos</h2>
+                    <div class="accordion" id="comp">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button fw-bold text-info-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#ben1">
+                                    Header
+                                </button>
+                            </h3>
+                            <div id="ben1" class="accordion-collapse collapse show" data-bs-parent="#comp">
+                                <div class="accordion-body texto">
+                                    Headers son los encabezados del token donde pasamos básicamente dos piezas de información: el alg que
+                                    informa qué algoritmo se usa para crear la firma y el typ que indica el tipo de token.
+                                    <br><br>
+                                    <pre class="bg-warning-subtle  p-3 rounded" style="tab-size: 2;">
+{
+    "alg": "HS256",
+    "typ": "JWT"
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-info-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#ben2">
+                                    Payload
+                                </button>
+                            </h3>
+                            <div id="ben2" class="accordion-collapse collapse" data-bs-parent="#comp">
+                                <div class="accordion-body texto">
+                                    El payload es el componente donde podemos encontrar datos de autenticación como contraseñas y correos
+                                    electrónicos, por ejemplo:
+                                    <br><br>
+                                    <pre class="bg-warning-subtle  p-3 rounded" style="tab-size: 2;">
+{
+    "email" : "nombre@alura.com.br"
+    "password" : "HuEKW489!j445*"
+}</pre>
+                                    </div>
+
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-info-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#ben3">
+                                    Signature
+                                </button>
+                            </h3>
+                            <div id="ben3" class="accordion-collapse collapse" data-bs-parent="#comp">
+                                <div class="accordion-body texto">
+                                    La firma del token (firma) está compuesta por la codificación del encabezado y el payload más una clave
+                                    secreta y es generada por el algoritmo especificado en el encabezado.
+                                    <br><br>
+                                    <pre class="bg-warning-subtle  p-3 rounded" style="tab-size: 2;">
+HS256SHA256(base64UrlEncode(header) + "." + base64UrlEncode(payload), secret_key)</pre>
+                                    El resultado son tres cadenas separadas por puntos que se pueden usar fácilmente en entornos HTML y protocolos HTTP
+                                    <pre class="bg-warning-subtle  p-3 rounded" style="tab-size: 2;">
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.
+SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</pre>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container my-5 py-5">
+            <h2 class="text-center encabezado">Crea un JWT</h2><br>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    
+                    <div class="card step-card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h5 mb-0 encabezado">Paso 1: Configuración inicial</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <p>Para comenzar, crea una carpeta llamada <code>jwt</code> en el directorio que prefieras. Dentro de esta carpeta, crea un archivo JavaScript con el nombre que elijas (en este ejemplo usaremos <code>index.js</code>).</p>
+                            
+                            <p>Instala la biblioteca JWT de tu elección. Hay varias opciones disponibles. Usaremos <code>jsonwebtoken</code>, que es una de las más populares.</p>
+                            
+                            <div class="alert alert-info">
+                                <strong>Comando de instalación:</strong>
+                                <pre class="mb-0"><code class="language-bash">npm install jsonwebtoken</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card step-card shadow-sm mt-4">
+                        <div class="card-header bg-warning text-dark">
+                            <h3 class="h5 mb-0 encabezado">Paso 3: Crear clave secreta</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <p>Ahora creamos nuestra clave secreta. Esta clave debe ser conocida solo por ti y debe ser lo suficientemente compleja para dificultar ataques maliciosos.</p>
+                            
+                            <div class="code-block">
+                                <pre><code class="language-javascript">const secretKey = 'skljaksdj9983498327453lsldkjf';</code></pre>
+                            </div>
+                            
+                            <div class="alert alert-warning texto">
+                                <strong>Nota de seguridad:</strong> En producción, nunca debes incluir claves secretas directamente en el código. Usa variables de entorno o un gestor de secretos.
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card step-card shadow-sm mt-4">
+                        <div class="card-header bg-danger text-white">
+                            <h3 class="h5 mb-0 encabezado">Paso 5: Ver el resultado</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <p>Para ver el resultado en la terminal, podemos usar <code>console.log</code>:</p>
+                            
+                            <div class="code-block">
+                                <pre><code class="language-javascript">console.log(nuestroToken);</code></pre>
+                            </div>
+                            
+                            <p>La salida debe ser:</p>
+                            
+                            <div class="alert alert-secondary">
+                                <code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vbWVAYWx1cmEuY29tLmJyIiwicGFzc3dvcmQiOiJIdUVLVzQ4OSFqNDQ1KiIsImlhdCI6MTY1MTY4MzUxNywiZXhwIjoxNjgzMjQxMTE3LCJzdWIiOiIxIn0.t0UuIAxJ1NPXANtlBOKfHfLsePF4LRPu4RA2WMkJl6A</code>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Columna Derecha -->
+                <div class="col-md-6">
+                    
+                    <div class="card step-card shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <h3 class="h5 mb-0 encabezado">Paso 2: Importar la biblioteca</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <p>El primer paso es importar la biblioteca a nuestro archivo:</p>
+                            
+                            <div class="code-block">
+                                <pre><code class="language-javascript">const jwt = require('jsonwebtoken');</code></pre>
+                            </div>
+                        </div>
+                    </div>
+    
+                    
+    
+                   
+                    <div class="card step-card shadow-sm mt-4">
+                        <div class="card-header bg-info text-white">
+                            <h3 class="h5 mb-0 encabezado">Paso 4: Generar el token</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <p>Vamos a crear nuestro token usando el método <code>sign</code>. Este método acepta como parámetros:</p>
+                            <ul>
+                                <li>El payload (datos que quieres incluir en el token)</li>
+                                <li>La clave secreta</li>
+                                <li>La cabecera (opciones adicionales)</li>
+                            </ul>
+                            
+                            <div class="code-block">
+                                <pre><code class="language-javascript">const nuestroToken = jwt.sign(
+      {
+        email: 'nome@alura.com.br',
+        password: 'HuEKW489!j445*',
+      },
+      secretKey,
+      {
+        expiresIn: '1y',
+        subject: '1',
+      }
+    );</code></pre>
+                            </div>
+                            
+                            <p>En este ejemplo:</p>
+                            <ul>
+                                <li>El payload contiene un email y contraseña</li>
+                                <li>Usamos nuestra <code>secretKey</code> definida anteriormente</li>
+                                <li>En las opciones especificamos que el token expira en 1 año (<code>expiresIn: '1y'</code>)</li>
+                                <li>Incluimos un subject (<code>sub</code>) que funciona como identificador</li>
+                            </ul>
+                            
+                            <p>Por defecto, el algoritmo de codificación es <strong>HS256</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm border-secondary mt-4">
+                        <div class="card-header bg-secondary text-white">
+                            <h3 class="h5 mb-0 encabezado">Usando Nodemon</h3>
+                        </div>
+                        <div class="card-body tetxo">
+                            <p>Para ver el resultado en terminal puedes usar <a href="https://nodemon.io/" target="_blank" class="alert-link">Nodemon</a>, una herramienta que reinicia automáticamente tu aplicación Node.js cuando detecta cambios en los archivos.</p>
+                            <pre class="mb-0"><code class="language-bash">npm install -g nodemon
+nodemon index.js</code></pre>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5 py-5">
+            <h2 class="text-center encabezado">Verificando el JWT</h2><br>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    
+                    <div class="card step-card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h5 mb-0 encabezado">jsonwebtoken</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <p>
+                                Para verificar nuestro token, podemos usar un método de la biblioteca jsonwebtoken llamado <span class="badge text-bg-secondary">decode</span>, pasando el token generado.
+                            </p>
+                            
+                            <div class="code-block bg-warning-subtle">
+                                <pre><code class="language-javascript">
+    const nuestroToken = jwt.sign(
+    const tokenGenerado = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vbWVAYWx1cmEuY29tLmJyIiwicGFzc3dvcmQiOiJIdUVLVzQ4OSFqNDQ1KiIsImlhdCI6MTY1MTY4MzUxNywiZXhwIjoxNjgzMjQxMTE3LCJzdWIiOiIxIn0.t0UuIAxJ1NPXANtlBOKfHfLsePF4LRPu4RA2WMkJl6A';
+
+    console.log(jwt.decode(tokenGerado));</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card step-card shadow-sm mt-4">
+                        <div class="card-header bg-danger text-white">
+                            <h3 class="h5 mb-0 encabezado">Alternativa</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <p>Otra alternativa para comprobar nuestro token es accediendo al enlace: <a href="https://jwt.io/" >https://jwt.io/</a> </p>
+                            
+                            <p>En este caso, solo necesitamos pasar el token generado y visualizaremos la información decodificada.</p>
+                            
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Columna Derecha -->
+                <div class="col-md-6">
+                    <div class="card step-card shadow-sm ">
+                        <div class="card-header bg-warning text-dark">
+                            <h3 class="h5 mb-0 encabezado">Salida</h3>
+                        </div>
+                        <div class="card-body texto">
+                            <p>Donde los parámetros iat, exp y sub son, respectivamente, las fechas de creación y caducidad, en formato UTC, en la que se creó el token y en la que caducará, y el asunto que le pasamos en nuestro código con valor 1.</p>
+                            
+                            <div class="code-block bg-warning-subtle">
+                                <pre><code class="language-javascript">
+    {
+        email: 'nome@alura.com.br',
+        password: 'HuEKW489!j445*',
+        iat: 1651683517,
+        exp: 1683241117,
+        sub: '1'
+    }</code></pre>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-5 my-5">
+            <h2 class="text-center encabezado">Ejemplo Autenticación con Tokens</h2>
+            <br>
+
+            <p class="texto">Imagina que eres desarrollador y estás creando el front-end de una aplicación para un banco. En la página de inicio de sesión, obtén datos de usuario y envía estos datos a una API utilizando fetch o axios, por ejemplo.</p>
+            <div class="code-block bg-dark text-info rounded m-5">
+                <pre class="p-3"><code class="language-javascript">
+fetch(`${baseUrl}/auth/login`, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: usuario,
+})
+.then((respuesta) => {
+...alguna cosa
+})
+.catch((error) => {
+...alguna cosa
+});</code></pre>
+                
+            </div>
+            <h3 class="h5 mb-3 text-primary encabezado">Proceso</h3>
+            
+                <ol class="list-group list-group-numbered bg-info-subtle texto">
+                    <li class="list-group-item bg-info-subtle">Usuario ingresa credenciales</li>
+                    <li class="list-group-item bg-success-subtle">El servidor tomará estos datos y por lógica devolverá un token que identificará a ese usuario. </li>
+                    <li class="list-group-item bg-danger-subtle">Cada vez que este usuario inicie sesión en la plataforma, pasará por la autenticación y si todo está correcto con los datos, estará autorizado a acceder a ciertas áreas de la aplicación</li>
+                    <li class="list-group-item bg-warning-subtle">Puede guardar el token en el almacenamiento de sesión de su navegador o en el almacenamiento local, para asegurarte de que, mientras el token no caduque, el usuario permanezca conectado a la aplicación.</li>
+                    <li class="list-group-item bg-primary-subtle">Cuando el usuario cierra la sesión de nuestra aplicación, puede redirigirlo a otra página, y cuando el token caduca, redirige al usuario a la página de inicio de sesión nuevamente.
+                    </li>
+                </ol>
+        
+            
+                    <br>
+            <p class="texto">Cuándo este usuario intente acceder a la página que muestra su saldo, por ejemplo, puede realizar una solicitud utilizando axios o fetch pasando en los encabezados un campo de "Autorización" con el token generado. Esto hará que el servidor verifique si el usuario tiene o no permiso para acceder a esa página específica.</p>
+            <div class="code-block bg-dark text-warning rounded m-5">
+                <pre class="p-3"><code class="language-javascript">
+fetch(`${baseUrl}/saldo`, {
+    headers: {
+     ‘Authorization’: Token,
+    },
+})
+.then((respuesta) => {
+...alguna cosa
+})
+.catch((error) => {
+...alguna cosa
+});</code></pre>
+                
+            </div>
+        </div>
+
+    </main>
+
+    <section class="video-section py-5 bg-light">
+        <div class="container-lg">
+            <h2 class="text-center mb-4">Mira este Video</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tWQobKFQLG0?si=clFHucqvDElJXSWl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="border-0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="text-center bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-col mt-4  border-end border-secondary">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="https://cdn-icons-png.flaticon.com/128/603/603198.png" alt="Logo" style="width:40px;" class="rounded-pill">
+                    </a>
+                    <p class="lead">Programación del lado del servidor</p>
+                </div>
+                
+                <div class="col-md-4 footer-col mt-3 border-end border-secondary">
+                    <h4>Referencias:</h4>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://www.aluracursos.com/blog/que-es-json-web-token" >Alura</a>
+                        </li>
+                        <li>
+                            <a href="https://assets.ctfassets.net/2ntc334xpx65/o5J4X472PQUI4ai6cAcqg/13a2611de03b2c8edbd09c3ca14ae86b/jwt-handbook-v0_14_1.pdf" >JWT Handbook</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-col mt-4">
+                    <h4>Sitio realizado por: </h4>
+                    <p>Erika Reyes González</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

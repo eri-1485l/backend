@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicaciones para la nube</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/5710/5710239.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="70">
+    
+    <nav class="navbar navbar-expand-lg  bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/128/603/603198.png" alt="Logo" style="width:40px;" class="rounded-pill">
+            </a>
+        <a class="navbar-brand display-6" href="index.html">Programación del lado del Servidor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tecnologías de Web APIs
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="HTTP.html">HTTP</a></li>
+                    <li><a class="dropdown-item" href="SOAP.html">SOAP</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="REST.html">REST</a></li>
+                    <li><a class="dropdown-item" href="JWT.html">JWT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Micro.html">Microservicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="API.html">Desarrollo de una Web API</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Cont.html">Contenedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Nube.html">Aplicaciones para la nube</a>
+                </li>
+            </ul>
+            
+            
+        </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-5 pt-2 ">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <!-- sidebar -->
+                <nav id="navbar-example3" class="ms-5 flex-column align-items-stretch pe-4 border-end position-sticky" style="top: 70px;">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">Desarrollo de aplicaciones para la nube</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-1-1">¿Qué es?</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">¿Cómo funciona?</a>
+                        </nav>
+                        <a class="nav-link" href="#item-2">Tipos</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-2-1">Beneficios</a>
+                            <a class="nav-link ms-3 my-1" href="#item-2-2">Desafíos</a>
+                        </nav>
+                        <a class="nav-link" href="#item-3">Proceso</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-3-1">Ejemplos</a>
+                        </nav>
+                        <a class="nav-link" href="#item-4">Vídeo</a>
+                    </nav>
+                </nav>
+            </div>
+            
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2 p-3" tabindex="0">
+                    <div id="item-1" class="mb-5 pt-3">
+                        <!-- CARRUSEL -->
+                        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                            </div>
+                            
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://dplnews.com/wp-content/uploads/2021/03/dplnews_cloudservers_vr230321.jpeg" alt="" class="d-block" style="width:100%">
+                                <div class="carousel-caption">
+                                <h1 class="text-light bg-dark opacity-75 rounded encabezado">Desarrollo de aplicaciones para la nube</h1>
+                                
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://www.ldhmsoftware.com/wp-content/uploads/2023/07/portada-1024x573.png" alt="" class="d-block" style="width:100%">
+                                
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://www.akamai.com/site/es/images/article/2023/what-is-the-cloud.png" alt="" class="d-block" style="width:100%">
+                                
+                                
+                            </div>
+                            </div>
+                            
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="alert alert-primary p-4 mt-2 mb-5 rounded-3 shadow-sm">
+                            <p class="mb-0 texto">
+                                El desarrollo de aplicaciones en la nube se ha convertido en un estándar de la industria para empresas emergentes y organizaciones empresariales. Los beneficios de este tipo de desarrollo son enormes: costos de desarrollo reducidos, un tiempo de comercialización más rápido y un proceso más flexible que le permite ajustar su producto en función de los comentarios de los clientes.
+                            </p>
+                    
+                        </div>
+                    </div>
+
+                    <div id="item-1-1" class="my-5 py-5">
+                        <h2 class="encabezado">¿Qué es la nube?</h2>
+                            <br>
+                            <p>
+                                <button class="btn btn-info fw-bold text-primary-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                                    Click me! 
+                                </button>
+                            </p>
+                            <div style="min-height: 20px;">
+                                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                    <div class="card card-body texto" style="width: 400px;">
+                                        Se trata de un modelo de entrega de servicios de computación, como servidores, bases de datos, software, almacenamiento y redes, a través de internet. Una red global de servidores distribuidos por todo el mundo que están interconectados y operan como un solo ecosistema.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card h-100 border-primary mt-3">
+                                <div class="card-header bg-primary text-white">
+                                    <h3 class="h5 mb-0 encabezado">¿Qué es una Aplicación Basada en la Nube?</h3>
+                                </div>
+                                <div class="card-body texto">
+                                    El término “basado en la nube” se refiere a aplicaciones, servicios o recursos que se proporcionan a través de Internet mediante una plataforma de computación en la nube. El desarrollo de aplicaciones basadas en la nube es el proceso de creación de aplicaciones de software que residen y se ejecutan en una plataforma en la nube.
+                                </div>
+                            </div>
+                            <div class="container p-5 my-5 text-primary-emphasis bg-info-subtle rounded">
+                                <h2 class="text-center encabezado">Cloud Application Development</h2>
+                                <div class="texto">
+                                    <p>El desarrollo de aplicaciones en la nube engloba todo el proceso de creación, prueba, despliegue y mantenimiento de aplicaciones de software empleando los servicios de los proveedores de servicios en la nube.</p>
+                                    <p>Un nuevo enfoque que permite a los desarrolladores crear software aprovechando la potencia y flexibilidad cloud, su capacidad remota y sus servicios escalables. Lo que deja de lado las estructuras IT locales sin necesidad de invertir en el hardware y su mantenimiento.</p>
+                                    
+                                </div>
+                            </div>
+                    </div>
+
+                    <div id="item-1-2" class="my-5 py-5">
+                        <section class="mb-5 p-4 rounded-3 shadow-sm">
+                            <h2 class="text-center mb-4 pb-2 border-bottom encabezado">¿Cómo funciona?</h2>
+                            <ol class="list-group list-group-numbered texto">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Provisión de recursos en la nube</div>
+                                        En función de las necesidades de la compañía, cada empresa contratará una serie de servicios determinados de procesamiento, almacenamiento de datos y servicios de red. Aquí es donde entran los proveedores más populares que se han mencionado anteriormente: AWS, GCP y Microsoft Azure, entre otros.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Desarrollo de aplicaciones en la nube</div>
+                                        Los programadores utilizan plataformas y herramientas en la nube para crear y ejecutar aplicaciones, empleando una amplia gama de servicios y tecnologías.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Pruebas y depuración</div>
+                                        Se realizan pruebas para garantizar el correcto funcionamiento de la aplicación, esto corresponde a la fase de QA y testing. Para ello, se pueden aprovechar los entornos de pruebas en la nube y herramientas de pruebas automáticas como Selenium y Postman. O también otros servicios de monitoreo y registro como AWS CloudWatch, Azure Monitor y Google Cloud Logging.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Despliegue en la nube</div>
+                                        Pasadas las pruebas, se despliega en la infraestructura de la nube a través de los servicios de despliegue automatizado y configurando la infraestructura de red. En esta fase destacan los componentes de AWS Elastic Beanstalk, Azure Deployment Center y Google Cloud Deployment Manager.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Mantenimiento técnico y evolutivo</div>
+                                        Es el momento de garantizar la disponibilidad y rendimiento de la aplicación. Para ello se supervisa y gestiona la infraestructura en la nube, controlando su capacidad. Así mismo, se pueden realizar actualizaciones que permitan evolucionar la plataforma y hacerla escalable. Gracias a la nube esto se puede realizar sin interrumpir significativamente el servicio.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Seguridad</div>
+                                        Es de vital importancia proteger los datos y cumplir con las regulaciones de seguridad relevantes. Para ello, se emplean medidas de seguridad robustas de servicios como AWS Key Management Service, Azure Key Vault y Google Cloud Key Management Service. Estas se combinan con herramientas de gestión de identidades y accesos, cifrado de datos, monitoreo, etc.
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                        <img src="https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/screenshots/Cloud-computing-infographic-4-3.jpg" 
+                        class="mx-auto d-block" style="max-width: 90%;" alt="api">
+                    </div>
+
+                    <div id="item-2" class="my-5 py-5">
+                        <h2 class="encabezado">Tipos de soluciones basadas en la nube</h2>
+                        <br><br>
+                        <button type="button" class="btn btn-info fw-bold text-info-emphasis" data-bs-toggle="modal" data-bs-target="#2Modal">Clic para ver</button>
+
+                        <div class="modal fade" id="2Modal" tabindex="-1" aria-labelledby="2ModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-info text-white">
+                                        <h5 class="modal-title" id="2ModalLabel">Tipos de soluciones</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="accordion" id="herramienta">
+                                            <div class="accordion-item">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button fw-bold text-primary-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#2ben1">
+                                                        1. Nube privada
+                                                    </button>
+                                                </h3>
+                                                <div id="2ben1" class="accordion-collapse collapse show" data-bs-parent="#herramienta">
+                                                    <div class="accordion-body texto">
+                                                        Es un entorno dedicado para una sola organización, que ofrece alta seguridad y control. Lo mejor para empresas con estrictas necesidades de privacidad o cumplimiento de datos.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed fw-bold text-primary-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#2ben2">
+                                                        2. Nube pública
+                                                    </button>
+                                                </h3>
+                                                <div id="2ben2" class="accordion-collapse collapse " data-bs-parent="#herramienta">
+                                                    <div class="accordion-body texto">
+                                                        Solo los dispositivos autorizados pueden acceder a los datos en un recurso de nube pública. Las nubes públicas suelen ofrecer la mejor combinación de costos y flexibilidad de procesamiento. Esta nube está alojada por proveedores externos y es accesible a través de Internet. 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed fw-bold text-primary-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#2ben3">
+                                                        3. Nube híbrida
+                                                    </button>
+                                                </h3>
+                                                <div id="2ben3" class="accordion-collapse collapse" data-bs-parent="#herramienta">
+                                                    <div class="accordion-body texto">
+                                                        Combina nubes privadas y públicas, permitiendo que los datos y las cargas de trabajo se muevan entre ellas. La nube híbrida se utiliza para el desarrollo de aplicaciones en la nube pública y privada. Aquí puedes difundir los datos entre aplicaciones de terceros y servicios en el dispositivo, así como elegir entre una variedad de opciones adicionales de implementación y optimización.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed fw-bold text-primary-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#2ben4">
+                                                        4. Nube comunitaria 
+                                                    </button>
+                                                </h3>
+                                                <div id="2ben4" class="accordion-collapse collapse" data-bs-parent="#herramienta">
+                                                    <div class="accordion-body texto">
+                                                        El despliegue de una nube comunitaria es comparable al de una nube privada, con la excepción de que aquí el intercambio de datos se produce entre dos (o más) empresas. Utiliza dos o más nubes de diferentes proveedores, ofreciendo flexibilidad y evitando la dependencia de un solo proveedor.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>  
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://ic.nordcdn.com/v1/https://sb.nordcdn.com/m/ad2230a3c4c1052f/original/blog-infographic-cloud-computing-svg.svg" 
+                        class="mx-auto d-block" style="max-width: 70%;" alt="api">
+
+                        <br>
+                        <h2 class="encabezado mt-5 pt-5">Tipos de desarrollo de software basado en la nube</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card  border-info mt-3">
+                                    <div class="card-header bg-info-subtle text-info-emphasis">
+                                        <h3 class="h5 mb-0 encabezado">Software como Servicio (SaaS)</h3>
+                                    </div>
+                                    <div class="card-body texto">
+                                        SaaS es un modelo de distribución de software en el que el proveedor aloja las aplicaciones empresariales y los usuarios acceden a ellas a través de Internet. Las aplicaciones SaaS generalmente se entregan mediante suscripción y se puede acceder a ellas desde cualquier dispositivo conectado a Internet.
+                                    </div>
+                                </div>
+                                <div class="card  border-success mt-3">
+                                    <div class="card-header bg-success-subtle text-success-emphasis">
+                                        <h3 class="h5 mb-0 encabezado">Infraestructura como Servicio (IaaS)</h3>
+                                    </div>
+                                    <div class="card-body texto">
+                                        IaaS es una plataforma de computación en la nube que brinda a las empresas acceso a recursos físicos o virtuales, como servidores, almacenamiento, redes y software. Los proveedores de IaaS suelen ofrecer modelos de precios de pago por uso e interfaces de gestión de autoservicio.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card  border-primary mt-3">
+                                    <div class="card-header bg-primary-subtle text-primary-emphasis">
+                                        <h3 class="h5 mb-0 encabezado">Plataforma como servicio (PaaS)</h3>
+                                    </div>
+                                    <div class="card-body texto">
+                                        PaaS es una plataforma de computación en la nube que permite a las empresas desarrollar, probar e implementar aplicaciones sin necesidad de infraestructura o middleware. Los proveedores de PaaS suelen ofrecer una variedad de herramientas y servicios, como almacenamiento, bases de datos, mensajería y herramientas de colaboración.
+                                    </div>
+                                </div>
+                                <div class="card  border-warning mt-3">
+                                    <div class="card-header bg-warning-subtle text-warning-emphasis">
+                                        <h3 class="h5 mb-0 encabezado">Proceso de negocio como servicio (BPaaS)</h3>
+                                    </div>
+                                    <div class="card-body texto">
+                                        Este software de recursos humanos es una plataforma en la nube que permite a las empresas subcontratar sus procesos de gestión de recursos humanos, como la incorporación de empleados, la nómina y las revisiones de desempeño, a un proveedor externo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2020Q2/microsoft-teams-best-practices/IaaS-PaaS-SaaS-slanted-control.png" 
+                        class="mx-auto d-block" style="max-width: 70%;" alt="api">
+
+                    </div>
+
+                    <div id="item-2-1" class="my-5 py-5">
+                        <h2 class="encabezado">Beneficios del desarrollo de aplicaciones basadas en la nube</h2><br>
+                        
+                        <div class="accordion" id="Beneficios">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben1">
+                                        1. Mayor flexibilidad y escalabilidad
+                                    </button>
+                                </h3>
+                                <div id="ben1" class="accordion-collapse collapse show" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        Con una aplicación basada en la nube, puede ampliar o reducir rápidamente según sus necesidades, sin tener que instalar ni desinstalar nada localmente.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben2">
+                                        2. Costos de TI reducidos
+
+                                    </button>
+                                </h3>
+                                <div id="ben2" class="accordion-collapse collapse" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        Las aplicaciones basadas en la nube pueden ser más económicas de ejecutar que el software tradicional, ya que no es necesario invertir en hardware ni mantenimiento local.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben3">
+                                        3. Seguridad mejorada
+                                    </button>
+                                </h3>
+                                <div id="ben3" class="accordion-collapse collapse" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        Como sus datos se almacenan de forma remota, son menos vulnerables a robos o daños. Y como las aplicaciones basadas en la nube se actualizan automáticamente, puede estar seguro de que su seguridad estará siempre actualizada.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben4">
+                                        4. Acceso en cualquier momento y lugar
+                                    </button>
+                                </h3>
+                                <div id="ben4" class="accordion-collapse collapse" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        Siempre que tenga una conexión a Internet, puede acceder a su aplicación basada en la nube desde cualquier parte del mundo. Esto los hace ideales para empresas con empleados que trabajan de forma remota o viajan con frecuencia.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>  
+                    </div>
+
+                    <div id="item-2-2" class="my-5 py-5">
+                        <div class="container mt-4">
+                            <h2 class="mb-4 encabezado">Desafíos del Desarrollo de Aplicaciones Basadas en la Nube</h2>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead class="thead-dark table-info">
+                                        <tr class="text-center">
+                                            <th scope="col" style="width: 20%">Desafío</th>
+                                            <th scope="col" style="width: 40%">Descripción</th>
+                                            <th scope="col" style="width: 40%">Solución</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="texto">
+                                            <td><strong>Preocupaciones de Seguridad y Privacidad de Datos</strong></td>
+                                            <td class="p-3">Las fugas de datos pueden causar graves daños financieros y de reputación, especialmente en sectores como la salud y las finanzas, donde las regulaciones de datos imponen fuertes multas.</td>
+                                            <td class="p-3">Proteger contra amenazas con autenticación multifactor, control de acceso basado en roles y cierre de sesión automático. Cifre sus bases de datos y canales de comunicación para que los datos sean ilegibles para los piratas informáticos. Garantice la seguridad de los datos con copias de seguridad y planes de recuperación para desastres o ransomware.</td>
+                                        </tr>
+                                        <tr class="texto">
+                                            <td><strong>Gestión de Entornos Multi-Cloud</strong></td>
+                                            <td class="p-3">La gestión de entornos de múltiples nubes puede ser compleja, ya que las empresas a menudo enfrentan dificultades para integrar servicios de diferentes proveedores. Puede tener dificultades para garantizar un rendimiento constante y mantener la seguridad y el cumplimiento en múltiples plataformas.</td>
+                                            <td class="p-3">Implementar herramientas de gestión unificada que centralizan el control, agilizan las operaciones y proporcionan visibilidad en todos los servicios en la nube. La estandarización de procesos, la automatización de flujos de trabajo y el uso de API para la integración también pueden ayudar a optimizar la administración de múltiples nubes.</td>
+                                        </tr>
+                                        <tr class="texto">
+                                            <td><strong>Optimización del Rendimiento</strong></td>
+                                            <td class="p-3">Mantener un buen rendimiento en diferentes plataformas en la nube es difícil. Esto es causado por diferencias en servicios, recursos y configuraciones de red.</td>
+                                            <td class="p-3">Considere las herramientas de monitoreo y análisis del rendimiento para identificar la causa de los cuellos de botella de red, CPU o RAM. Seleccione la plataforma adecuada para cada carga de trabajo. Y no se olvide de los equilibradores de carga que procesan y distribuyen el tráfico a través de servidores y bases de datos para optimizar la carga.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="item-3" class="my-5 py-5">
+                        <h2 class="encabezado">Proceso de Desarrollo</h2><br>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary mt-3">
+                                    <div class="card-header bg-primary-subtle text-primary-emphasis">
+                                        <h3 class="h5 mb-0 encabezado">1. Determinar el requisito</h3>
+                                    </div>
+                                    <div class="card-body texto">
+                                        El primer paso es determinar los requisitos de la aplicación. Esto incluye comprender las necesidades de los usuarios y los objetivos comerciales de la organización.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-info mt-3">
+                                    <div class="card-header bg-info-subtle text-info-emphasis">
+                                        <h3 class="h5 mb-0 encabezado">2. Seleccione una plataforma adecuada</h3>
+                                    </div>
+                                    <div class="card-body texto">
+                                        Una vez comprendidos los requisitos, el siguiente paso es seleccionar una plataforma adecuada para desarrollar la aplicación. Hay muchas plataformas basadas en la nube disponibles, cada una con su propio conjunto de características y capacidades. La plataforma seleccionada debe poder satisfacer las necesidades específicas de la aplicación.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-warning mt-3">
+                                    <div class="card-header bg-warning-subtle text-warning-emphasis">
+                                        <h3 class="h5 mb-0 encabezado">3. Desarrolla la aplicación</h3>
+                                    </div>
+                                    <div class="card-body texto">
+                                        Después de seleccionar una plataforma, el siguiente paso es desarrollar la aplicación real. Esto implica diseñar y codificar las diversas funciones de la aplicación.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-success mt-3">
+                                    <div class="card-header bg-success-subtle text-success-emphasis">
+                                        <h3 class="h5 mb-0 encabezado">4. Realizar pruebas</h3>
+                                    </div>
+                                    <div class="card-body texto">
+                                        Una vez finalizado el proceso de desarrollo, la aplicación debe probarse para garantizar que cumple con todos los estándares requeridos.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-danger mt-3">
+                                    <div class="card-header bg-danger-subtle text-danger-emphasis">
+                                        <h3 class="h5 mb-0 encabezado">5. Despliegue</h3>
+                                    </div>
+                                    <div class="card-body texto">
+                                        Después de la prueba, la aplicación se puede implementar en una plataforma basada en la nube para que la utilicen los usuarios.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div id="item-3-1" class="my-5 py-5">
+                        <h2 class="encabezado">Ejemplos de aplicaciones basadas en la nube</h2>
+                        <div class="row">
+                            <div class="col  p-3">
+                                
+                                <div class="card" style="width:400px">
+                                    <img class="card-img-top" src="https://mesadeayuda.servinformacion.com/hs-fs/hubfs/Workspace_Main.png?width=655&height=565&name=Workspace_Main.png" alt="Card image" style="width:100%">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Google Workspace</h4>
+                                        <p class="card-text">Anteriormente conocido como Google Suite y similar a Microsoft Office 365: esta plataforma ofrece diversas herramientas de la compañía. Gmail, Google Drive, Google Sheets, Google Fotos, Google Docs, entre otras.</p>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col  p-3">
+                                <div class="card" style="width:400px">
+                                    <img class="card-img-top" src="https://ourdeal.co.uk/wp-content/uploads/2023/12/Is-Zoom-available-for-use-on-a-MacBook.jpg" alt="Card image" style="width:100%">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Zoom</h4>
+                                        <p class="card-text">Una plataforma de videoconferencia que a partir del COVID-19 se popularizó enormemente. Permite realizar videollamadas, webinars, eventos, reuniones virtuales y clases online.</p>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col  p-3">
+                                
+                                <div class="card" style="width:400px">
+                                    <img class="card-img-top" src="https://s3-symbol-logo.tradingview.com/airbnb--600.png" alt="Card image" style="width:100%">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Airbnb </h4>
+                                        <p class="card-text">te permite convertir tu apartamento o habitación libre en una fuente de ingresos, o encontrar alojamiento vacacional ofrecido por particulares (no empresas comerciales).</p>
+                                    
+                                    </div>
+                                </div>
+            
+                            </div>
+                            <div class="col  p-3">
+                                
+                                <div class="card" style="width:400px">
+                                    <img class="card-img-top" src="https://play-lh.googleusercontent.com/hoVBnPBRehmXsCqESLXRH2E3OTxklkwKZlb1psn7imm0VUSobn2nevS9RRFWb9GM4-o" alt="Card image" style="width:100%">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Figma</h4>
+                                        <p class="card-text">Una aplicación de diseño UX y UI que permite a los diseñadores crear y colaborar diferentes diseños en tiempo real y simultáneamente. Cuenta con prototipado interactivo, comentarios, librerías compartidas y mucho más.</p>
+                                    
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                            
+                        
+                    </div>
+                    
+                    <div id="item-4" class="mb-5 pt-3">
+                        <section class="video-section py-5 bg-light">
+                            <div class="container-lg">
+                                <h2 class="text-center mb-4">Mira este Video</h2>
+                                <div class="row">
+                                    <div class="col-lg-10 mx-auto">
+                                        <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/bPSSlkGBQ_g?si=O3Qjiwy9FzyMbJtH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="border-0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-col mt-4  border-end border-secondary">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="https://cdn-icons-png.flaticon.com/128/603/603198.png" alt="Logo" style="width:40px;" class="rounded-pill">
+                    </a>
+                    <p class="lead">Programación del lado del servidor</p>
+                </div>
+                
+                <div class="col-md-4 footer-col mt-3 border-end border-secondary">
+                    <h4>Referencias:</h4>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://acropolium.com/blog/cloud-based-app-development/" >Acropolium</a>
+                            
+                        </li>
+                        <li>
+                            <a href="https://richestsoft.com/es/blog/cloud-application-development/" >Richestsoft</a>
+                        </li>
+                        <li>
+                            
+                            <a href="https://www.armadilloamarillo.com/blog/que-es-el-desarrollo-de-aplicaciones-en-la-nube/#:~:text=Tambi%C3%A9n%20conocido%20como%20Cloud%20Application,de%20servicios%20en%20la%20nube." >Armadillo</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-col mt-4">
+                    <h4>Sitio realizado por: </h4>
+                    <p>Erika Reyes González</p>
+                </div>
+            </div>
+        </div>
+    </footer>            
+</body>
+</html>

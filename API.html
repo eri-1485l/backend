@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/718/718064.png">
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="70">
+    
+    <nav class="navbar navbar-expand-lg  bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/128/603/603198.png" alt="Logo" style="width:40px;" class="rounded-pill">
+            </a>
+        <a class="navbar-brand display-6" href="index.html">Programación del lado del Servidor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tecnologías de Web APIs
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="HTTP.html">HTTP</a></li>
+                    <li><a class="dropdown-item" href="SOAP.html">SOAP</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="REST.html">REST</a></li>
+                    <li><a class="dropdown-item" href="JWT.html">JWT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Micro.html">Microservicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="API.html">Desarrollo de una Web API</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Cont.html">Contenedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Nube.html">Aplicaciones para la nube</a>
+                </li>
+            </ul>
+            
+            
+        </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-5 pt-4 ">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <!-- sidebar -->
+                <nav id="navbar-example3" class="ms-5 flex-column align-items-stretch pe-4 border-end position-sticky" style="top: 70px;">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">Desarrollo de una WEB API</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-1-1">¿Qué es?</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">¿Cómo funcionan?</a>
+                        </nav>
+                        <a class="nav-link" href="#item-2">Beneficios</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-2-1">Recomendaciones</a>
+                            <a class="nav-link ms-3 my-1" href="#item-2-2">Herramientas</a>
+                        </nav>
+                        <a class="nav-link" href="#item-3">Proceso</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-3-1">Mejores Prácticas</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-2">Características</a>
+                        </nav>
+                        <a class="nav-link" href="#item-4">Vídeo</a>
+                    </nav>
+                </nav>
+            </div>
+            
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2 p-3" tabindex="0">
+                    <div id="item-1" class="mb-5 ">
+                        <!-- CARRUSEL -->
+                        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                            </div>
+                            
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://www.mindinventory.com/blog/wp-content/uploads/2024/07/api-development.webp" alt="" class="d-block" style="width:100%">
+                                <div class="carousel-caption">
+                                <h1 class="text-light bg-dark opacity-75 rounded encabezado">Desarrollo Web API</h1>
+                                
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cl.abstracta.us/wp-content/uploads/2021/09/API-Application-Programming-Interfaces.png" alt="" class="d-block" style="width:100%">
+                                
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://voyager.postman.com/illustration/diagram-api-client-postman-illustration.svg" alt="" class="d-block" style="width:100%">
+                                
+                                
+                            </div>
+                            </div>
+                            
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                            
+                        <div class="alert alert-primary p-4 mt-2 mb-5 rounded-3 shadow-sm">
+                            <p class="mb-0 texto">
+                                El diseño de API web es una disciplina fundamental para el desarrollo de aplicaciones y servicios, al facilitar el intercambio fluido de datos entre diferentes sistemas.
+                                Desarrollo API promueve la modularidad, la reutilización y la innovación, permitiendo a las empresas crear ecosistemas robustos en torno a sus productos y servicios.
+                            </p>
+                    
+                        </div>
+                    </div>
+
+                    <div id="item-1-1" class="mb-5 py-5">
+                        
+                        <h2 class="encabezado">¿Qué es una API?</h2>
+                            <br>
+                            <p>
+                                <button class="btn btn-info fw-bold text-primary-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                                    ¿Qué Significa? 
+                                </button>
+                            </p>
+                            <div style="min-height: 20px;">
+                                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                    <div class="card card-body texto" style="width: 400px;">
+                                        API significa “interfaz de programación de aplicaciones”. En el contexto de las API, la palabra aplicación se refiere a cualquier software con una función distinta. La interfaz puede considerarse como un contrato de servicio entre dos aplicaciones. Este contrato define cómo se comunican entre sí mediante solicitudes y respuestas. 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-success mt-3">
+                                        <div class="card-header bg-success text-white">
+                                            <h3 class="h5 mb-0 encabezado">¿Qué es?</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            Son construcciones disponibles en los lenguajes de programación que permiten a los desarrolladores crear funcionalidades complejas de una manera simple. Estas abstraen el código más complejo para proveer una sintaxis más fácil de usar en su lugar.
+                                            Las API son mecanismos que permiten a dos componentes de software comunicarse entre sí mediante un conjunto de definiciones y protocolos. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-info mt-3">
+                                        <div class="card-header bg-info-subtle text-primary-emphasis">
+                                            <h3 class="h5 mb-0 encabezado">¿Qué es el desarrollo de API Web?</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            Una API a la que se puede acceder en la web utilizando el protocolo de transferencia de hipertexto (HTTP) se conoce como una API web. Sirve como marco para construir servicios RESTFUL basados en HTTP. Servicio de integración API se puede utilizar para acceder a una API web. El servidor web recibe solicitudes de una variedad de dispositivos cliente, incluidos teléfonos móviles y computadoras portátiles, procesa las solicitudes y luego devuelve la salida deseada al cliente.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div id="item-1-2" class="my-5 py-5">
+                        
+                        <section class="mb-5 p-4 rounded-3 shadow-sm">
+                            <h2 class="text-center mb-4 pb-2 border-bottom encabezado">¿Cómo funciona normalmente una API?</h2>
+                            <ol class="list-group list-group-numbered texto">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Solicitud de API</div>
+                                        La aplicación cliente envía una solicitud a la API, solicitar datos específicos o solicitar que se realice una acción en particular. Esta solicitud sigue un formato y estructura predefinidos especificados por la API.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">API Recibe Solicitud</div>
+                                        El punto final de la API recibe la solicitud, verificando la clave de la API y asegurándose de que la solicitud siga los protocolos correctos. Dependiendo de los requisitos de seguridad de la API, es posible que deba autenticar y autorizar la aplicación del cliente antes de procesar la solicitud.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold"> Procesar la solicitud</div>
+                                        Una vez autenticada y autorizada, la API procesa la solicitud. Esto puede implicar consultar una base de datos, realizar cálculos o interactuar con otros sistemas o servicios.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Respuesta API</div>
+                                        Después de procesar la solicitud, la API prepara una respuesta. Esta respuesta contiene los datos o el resultado de la acción solicitada, formateada de acuerdo con las especificaciones de la API.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">El cliente recibe respuesta</div>
+                                        La aplicación cliente recibe la respuesta de la API. Luego puede procesar y usar los datos o la funcionalidad proporcionada por la API para actualizar su interfaz de usuario, realizar operaciones adicionales o cumplir con la solicitud del usuario.
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgoNgku8MTdav4gIiWDW4v2f2tjZT89lKIVeXU0dfzyc-sbJqbRxUshzE1RlcQ_EUwrnvtNfvzoJPONCjJEUGUpTtzAHutO2giW93HACzsOqnHJgBiY7fsJ2G0ELRxbNiHWbvZq86Z_4o/w1200-h630-p-k-no-nu/Arquitectura-Depliegue.png" 
+                        class="mx-auto d-block" style="max-width: 90%;" alt="api">
+                    </div>
+
+                    <div id="item-2" class="mb-5 py-5">
+                       
+                        <h2 class="encabezado">Beneficios del Desarrollo de API Web</h2><br>
+                        
+                        <div class="accordion" id="Beneficios">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben1">
+                                        Reusabilidad y Eficiencia
+                                    </button>
+                                </h3>
+                                <div id="ben1" class="accordion-collapse collapse show" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        El desarrollo de APIs Web fomenta la reutilización y efectividad de la programación. Los desarrolladores pueden evitar comenzar desde cero mediante el uso de API para acceder a servicios y funcionalidades preexistentes. Como resultado, los desarrolladores pueden concentrarse en la lógica principal y las características de la aplicación, ahorrando tiempo, esfuerzo y recursos.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben2">
+                                        Integración perfecta
+
+                                    </button>
+                                </h3>
+                                <div id="ben2" class="accordion-collapse collapse" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        Las API están hechas para facilitar la integración de varios sistemas de software. Las API en línea hacen posible que las aplicaciones en línea se comuniquen e intercambien datos con otros programas, bases de datos y otros sistemas externos.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben3">
+                                        Rendimiento y Escalabilidad
+                                    </button>
+                                </h3>
+                                <div id="ben3" class="accordion-collapse collapse" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        Las API web están diseñadas para acomodar una gran cantidad de consultas y escalas con la creciente demanda de los usuarios. La API de back-end y la aplicación web de front-end pueden ser escaladas por separado por los desarrolladores manteniéndolas separadas. Esta escalabilidad garantiza el máximo rendimiento, incluso durante los momentos de máximo tráfico, y brinda a los usuarios una experiencia confiable y receptiva.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ben4">
+                                        Independencia de Plataforma y Dispositivo
+                                    </button>
+                                </h3>
+                                <div id="ben4" class="accordion-collapse collapse" data-bs-parent="#Beneficios">
+                                    <div class="accordion-body texto">
+                                        Se puede acceder a las API web desde una variedad de dispositivos, incluidos computadoras de escritorio, computadoras portátiles, tabletas y teléfonos inteligentes. Son neutrales en la plataforma. Debido a su capacidad para funcionar sin problemas en muchas plataformas y dispositivos, las aplicaciones web compatibles entre plataformas y dispositivos permiten a los desarrolladores llegar a un público más amplio y mejorar la accesibilidad.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>  
+                        <img src="https://nbxsoluciones.com/wp-content/uploads/2022/06/api_portada.jpg" 
+                        class="mx-auto d-block" style="max-width: 70%;" alt="api">
+                        
+                        
+                    </div>
+
+                    <div id="item-2-1" class="my-5 py-5">
+                        
+                        <div class="container mt-4">
+                            <h2 class="mb-4 encabezado">Recomendaciones</h2>
+                            <div class="table-responsive">
+                                <table class="table table-hover table-bordered table-light">
+                                    <thead >
+                                        <tr>
+                                            <th style="width: 30%"></th>
+                                            <th style="width: 70%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Definir los objetivos de la API</strong></td>
+                                            <td class="texto p-3">
+                                                <p>Antes de comenzar a desarrollar la
+                                                    API, es fundamental tener una comprensión clara de los problemas
+                                                    que intentará resolver y los usuarios a los que servirá.</p>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Seguir estándares y convenciones</strong></td>
+                                            <td class="texto p-3">
+                                                <p>
+                                                    Es importante seguir los
+                                                    estándares y convenciones de la industria al desarrollar una API web.
+                                                    Esto facilita la comprensión y el uso de la API por parte de otros
+                                                    desarrolladores, por ejemplo seguir los principios de REST, utilizar
+                                                    JSON o XML como formatos de intercambio de datos,etc.
+                                                </p>
+                                            
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Documentar la API de manera exhaustiva</strong></td>
+                                            <td class="texto p-3">
+                                                <p>
+                                                    La documentación
+                                                    clara y completa de la API es esencial para que otros desarrolladores
+                                                    puedan entender cómo usarla correctamente, se pueden utilizar
+                                                    herramientas como Swagger o Postman para generar documentación
+                                                    automáticamente.
+
+                                                </p>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Priorizar la seguridad</strong></td>
+                                            <td class="texto p-3">
+                                                <p>La seguridad es un aspecto crucial en el
+                                                    desarrollo de las APIs web, se deben implementar medidas de
+                                                    seguridad como autenticación y autorización para proteger la API de
+                                                    accesos no autorizados.
+                                                    </p>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Versionar la API</strong></td>
+                                            <td class="texto p-3">
+                                                <p>A medida que la API evoluciona, es importante mantener la
+                                                    compatibilidad hacia atrás, versionar la API permite introducir cambios
+                                                    sin afectar a los usuarios existentes.</p>
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="item-2-2" class="my-5 py-5">
+                        
+                        <h2 class="encabezado">Las Mejores Herramientas de Desarrollo de API Web</h2>
+                        <br><br>
+                        <button type="button" class="btn btn-warning fw-bold text-primary-emphasis" data-bs-toggle="modal" data-bs-target="#2Modal">Clic para ver</button>
+
+                        <div class="modal fade" id="2Modal" tabindex="-1" aria-labelledby="2ModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-warning text-dark">
+                                        <h5 class="modal-title encabezado" id="2ModalLabel">Herramientas</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="accordion" id="herramienta">
+                                            <div class="accordion-item">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button fw-bold text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#2ben1">
+                                                        Postman
+                                                    </button>
+                                                </h3>
+                                                <div id="2ben1" class="accordion-collapse collapse show" data-bs-parent="#herramienta">
+                                                    <div class="accordion-body texto">
+                                                        Una plataforma para desarrollar API se llama Postman. Puede diseñar API de manera más rápida y efectiva porque agiliza la cooperación y simplifica cada fase del ciclo de vida de la API.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed fw-bold text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#2ben2">
+                                                        SoapUI
+                                                    </button>
+                                                </h3>
+                                                <div id="2ben2" class="accordion-collapse collapse " data-bs-parent="#herramienta">
+                                                    <div class="accordion-body texto">
+                                                        Los desarrolladores pueden probar REST, SOAP, GraphQL y Web Services con SoapUI, un Herramienta de prueba API. SoapUI ofrece a los equipos de desarrollo y pruebas una potente herramienta para diseñar, ejecutar y depurar sofisticadas pruebas de servicios web. Los informes de prueba, las pruebas de API SOAP y otras capacidades especiales son solo algunas de las características de SoapUIars.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed fw-bold text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#2ben3">
+                                                        Apigee
+                                                    </button>
+                                                </h3>
+                                                <div id="2ben3" class="accordion-collapse collapse" data-bs-parent="#herramienta">
+                                                    <div class="accordion-body texto">
+                                                        Apigee es una plataforma completa de administración de API que proporciona soluciones de extremo a extremo para el desarrollo de API y la administración del ciclo de vida y actualmente forma parte de Google Cloud. Ofrece una amplia gama de capacidades, como desarrollo de API, diseño, seguridad, análisis y monetización. Las organizaciones pueden crear, publicar y administrar API a escala con Apigee, lo que garantiza un excelente rendimiento, seguridad y visibilidad.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed fw-bold text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#2ben4">
+                                                        Paw 
+                                                    </button>
+                                                </h3>
+                                                <div id="2ben4" class="accordion-collapse collapse" data-bs-parent="#herramienta">
+                                                    <div class="accordion-body texto">
+                                                        Paw es una robusta herramienta de desarrollo de API hecha especialmente para Mac. Proporciona una interfaz visual con soporte para varios protocolos y técnicas de autenticación para crear y probar APIs. Paw ofrece características sofisticadas como opciones de intercambio colaborativo, valores dinámicos y desarrollo de código.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed fw-bold text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#2ben5">
+                                                        RapidAPI
+                                                    </button>
+                                                </h3>
+                                                <div id="2ben5" class="accordion-collapse collapse" data-bs-parent="#herramienta">
+                                                    <div class="accordion-body texto">
+                                                        RapidAPI es una plataforma de administración de API y un mercado que proporciona una selección significativa de API de varios proveedores. Ofrece una interfaz uniforme para descubrir, integrar y administrar API para desarrolladores. RapidAPI ofrece una variedad de herramientas y funcionalidades para pruebas de API, documentación y administración de suscripciones.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>  
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img src="https://images.prismic.io/turing/65980dc1531ac2845a2727a4_10_best_Rest_API_tools_46dfb7fc64.webp?auto=format,compress" 
+                        class="mx-auto d-block" style="max-width: 70%;" alt="api">
+                        
+                    </div>
+
+                    <div id="item-3" class="my-5 py-5">
+                        
+                        <h2 class="encabezado">Proceso de Desarrollo</h2><br>
+                        <div class="container mt-4">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-primary bg-gradient text-white">
+                                            <h3 class="h5 mb-0 encabezado">Paso 1: Análisis de requerimientos</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Identificar los requisitos funcionales
+                                                y no funcionales de la API, incluidos los casos de uso y los datos
+                                                que se manipularán.
+                                                </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-success bg-gradient text-white">
+                                            <h3 class="h5 mb-0 encabezado">Paso 2: Planificación</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Una vez que se han definido los requerimientos, se
+                                                pasa a la planificación del proyecto, que incluye la definición de los
+                                                objetivos del proyecto, la asignación de recursos, la estimación de
+                                                tiempos y costos, y la definición de la metodología de desarrollo a
+                                                utilizar. La planificación se basa en los requerimientos identificados.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-warning bg-gradient text-dark">
+                                            <h3 class="h5 mb-0 encabezado">Paso 3: Diseño de la API</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Definir los endpoints, métodos HTTP admitidos,
+                                                parámetros de solicitud y respuesta, y esquema de autenticación.</p>
+                                            <p>Un endpoint en el contexto de una API web es una URL específica a
+                                                la que los clientes pueden enviar solicitudes HTTP para interactuar
+                                                con la API, cada endpoint está asociado con una operación
+                                                específica que la API puede realizar, como obtener información,
+                                                enviar datos o eliminar recursos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Fila 2 -->
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-info bg-gradient text-info-emphasis">
+                                            <h3 class="h5 mb-0 encabezado">Paso 4: Implementación</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Al desarrollar una API se debe seguir un diseño
+                                                definido, utilizando herramientas y frameworks adecuados como
+                                                por ejemplo Express.js para Node.js o Flask para Python.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-danger bg-gradient text-white">
+                                            <h3 class="h5 mb-0 encabezado">Paso 5: Pruebas</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Realizar pruebas unitarias y de integración para
+                                                garantizar que la API funcione según lo esperado y que maneje
+                                                adecuadamente los errores.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-secondary bg-gradient text-white">
+                                            <h3 class="h5 mb-0 encabezado">Paso 6: Documentación</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Crear documentación clara y detallada de la API,
+                                                incluidos ejemplos de uso y casos de error.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Fila 3 -->
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-dark bg-gradient text-white">
+                                            <h3 class="h5 mb-0 encabezado">Paso 7: Despliegue</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Implementar la API en un entorno de producción,
+                                                asegurando que esté disponible y escalable.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-light  bg-gradient text-dark">
+                                            <h3 class="h5 mb-0 encabezado">Paso 8: Monitoreo y mantenimiento</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Establecer un sistema de monitoreo
+                                                para detectar problemas y realizar mantenimiento regular para
+                                                garantizar que la API siga siendo eficiente y segura.
+                                                </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="card h-100 shadow-sm">
+                                        <div class="card-header bg-primary-subtle text-primary-emphasis">
+                                            <h3 class="h5 mb-0 encabezado">Paso 9: Comercialización (opcional)</h3>
+                                        </div>
+                                        <div class="card-body texto">
+                                            <p>Al desarrollar Apis que serán
+                                                ofertadas al público o las empresas, entonces será conveniente
+                                                publicar la API para monetizarla en algún mercado de APIs en donde
+                                                los desarrolladores compran y vendan.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="item-3-1" class="mb-5 py-5">
+                        
+                        <div class="container p-5 my-5 text-primary-emphasis">
+                            <h2 class="text-center encabezado">Mejores Prácticas en Desarrollo de API</h2>
+                            <br>
+                            <ul class="texto">
+                                <li>
+                                    Utilice convenciones de nombres claras y consistentes para los puntos finales para mejorar el diseño y la API experiencia de desarrollador, y prevenir confusión o errores.
+                                </li>
+                                <li>
+                                    Usa lo correcto Métodos HTTP (GET, POST, PUT, DELETE) para operaciones CRUD para garantizar una comunicación API eficiente y segura.
+                                </li>
+                                <li>
+                                    Diseñe API que se adhieran a las mejores prácticas para crear sistemas de software robustos, escalables y seguros.
+                                </li>
+                                <li>
+                                    Implementar robusto autenticación y estrategias de autorización para proteger las API contra amenazas y garantizar la integridad de los datos.
+                                </li>
+                                <li>
+                                    Implementar medidas de seguridad, incluido el cifrado de datos y SSL/TLS, para proteger las API contra amenazas y garantizar la integridad de los datos.
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="https://cdn.prod.website-files.com/623a17f293c65d02ed7b88bd/6252ae212800cfa0178ddf10_best-api-security-practices.png" 
+                            class="mx-auto d-block rounded shadow" style="max-width: 70%;" alt="">
+                    </div>
+
+                    <div id="item-3-2" class="mb-5 py-5">
+                        
+                        
+                        
+                        <div class="container p-5 my-5 bg-danger-subtle bg-gradient bg-opacity-25 text-info-emphasis rounded-3">
+                            <h2 class="text-center encabezado">Características esenciales</h2>
+                            <ul class="texto">
+                                <li>
+                                    Consistencia en las convenciones de nombres y formatos de respuesta
+                                </li>
+                                <li>
+                                    Fiabilidad bajo carga pesada
+                                </li>
+                                <li>
+                                    Seguridad contra vulnerabilidades comunes de desarrollo de API
+                                </li>
+                                <li>
+                                    Accesibilidad a través de mecanismos seguros de autenticación y autorización
+                                </li>
+                                <li>
+                                    Flexibilidad durante todo el ciclo de vida de la API
+                                </li>
+                                <li>
+                                    Extensibilidad, por lo que los cambios no rompen su API
+                                </li>
+                            </ul> 
+                        </div>
+                        <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F66e9dc1a-3ca4-40a6-9578-ee59e9ae0ef8_3000x3900.png" 
+                            class="mx-auto d-block" style="max-width: 70%;">
+                    </div>
+
+                    <div id="item-4" class="mb-5 pt-3">
+                        <section class="video-section py-5 bg-light">
+                            <div class="container-lg">
+                                <h2 class="text-center mb-4">Mira este Vídeo</h2>
+                                <div class="row">
+                                    <div class="col-lg-10 mx-auto">
+                                        <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/IhzQUI6XHPw?si=pGToWWddIGEL-_C-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="border-0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-col mt-4  border-end border-secondary">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="https://cdn-icons-png.flaticon.com/128/603/603198.png" alt="Logo" style="width:40px;" class="rounded-pill">
+                    </a>
+                    <p class="lead">Programación del lado del servidor</p>
+                </div>
+                
+                <div class="col-md-4 footer-col mt-3 border-end border-secondary">
+                    <h4>Referencias:</h4>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://www.getambassador.io/blog/api-development-comprehensive-guide" >Ambassador</a>
+                        </li>
+                        <li>
+                            <a href="https://aws.amazon.com/es/what-is/api/" >AWS</a>
+                        </li>
+                        <li>
+                            <a href="https://www.cmarix.com/blog/web-api-development/" >Cmarix</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-col mt-4">
+                    <h4>Sitio realizado por: </h4>
+                    <p>Erika Reyes González</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
